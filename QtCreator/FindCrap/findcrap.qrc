@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>findcrap.txt</file>
+    </qresource>
+</RCC>
