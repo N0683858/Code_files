@@ -66,6 +66,7 @@ void dataHolder::save() //takes value "QString fileName"
         save << projects[i]->getMainLanguage() << " ";
         save << projects[i]->getSummary() << " ";
         save << projects[i]->getReleaseDate() << " ";
+        //save << projects[i]->getCrew().getCast() << " "; //sholdn't this have more functions? not sure if this is right
         //Producer's Info
         save << projects[i]->getCrew().getProducer().getAge() << " ";
         save << projects[i]->getCrew().getProducer().getContactInfo() << " ";
@@ -129,87 +130,73 @@ void dataHolder::load()
 
     for(size_t i = 0; i < num_of_projects; i++)
     {
-        QString loadProject = reading.readLine();
+        QString loadProject = reading.readLine();//read the next line from the file
         QRegExp rx("[, \n]"); // match a comma or a space etc. so basically anything you want to ingore want not be read in
-        QStringList tempProjectHolder = loadProject.split(rx, QString::SkipEmptyParts);
+        QStringList tempProjectHolder = loadProject.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.
+        //convert the string to Int
+        QString temptIDholder = tempProjectHolder.at(0);
+        int convertedID = temptIDholder.toInt();
+        //reading the data into the right variables from the list string
+        projects[i]->setId(convertedID);
+        projects[i]->setTitle(tempProjectHolder.at(1));//getting second item from the list which should be the title and then so on
+        projects[i]->setGenre(tempProjectHolder.at(2));
+        projects[i]->setRuntime(tempProjectHolder.at(3));
+        projects[i]->setMainLanguage(tempProjectHolder.at(4));
+        projects[i]->setSummary(tempProjectHolder.at(5));
+        projects[i]->setReleaseDate(tempProjectHolder.at(6));
 
-        projects[i]->setId(tempProjectHolder.at(0);//would you need to convert it to an int
-        projects[i]->setTitle(tempProjectHolder.at(1));
-        save << projects[i]->getGenre() << " ";
-        save << projects[i]->getRuntime() << " ";
-        save << projects[i]->getMainLanguage() << " ";
-        save << projects[i]->getSummary() << " ";
-        save << projects[i]->getReleaseDate() << " ";
         //Producer's Info
-        save << projects[i]->getCrew().getProducer().getAge() << " ";
-        save << projects[i]->getCrew().getProducer().getContactInfo() << " ";
-        save << projects[i]->getCrew().getProducer().getName() << " ";
-        save << projects[i]->getCrew().getProducer().getSalery() << " ";
+        //projects[i]->setCrew(project::setProducer(tempProjectHolder.at(7), tempProjectHolder.at(8), tempProjectHolder.at(9), tempProjectHolder.at(10)));//wouldn set Crew needs to take more values
+        //such "int age, QString contactInfo, QString name, QString salary" or somthing so you can then assign them or is there another way. I've had a look inside the cpp files and functions and still
+        //didn't understand how you wanted the data being read in, sorry but i i'll give it a try anyway
+        //projects[i]->setCrew(tempProjectHolder.at(7).setProducer().setAge()); //or is it supposed to be somthing like this or are they supposed to be nested inside eachother
+        projects[i]->setCrew(crew::setProducer(person::setAge(tempProjectHolder.at(7))));
+        projects[i]->setCrew(crew::setProducer(person::setContactInfo(tempProjectHolder.at(8))));
+        projects[i]->setCrew(crew::setProducer(person::setName(tempProjectHolder.at(9))));
+        projects[i]->setCrew(crew::setProducer(person::setSalery(tempProjectHolder.at(10))));
+
         //Director's Info
-        save << projects[i]->getCrew().getDirector().getAge() << " ";
-        save << projects[i]->getCrew().getDirector().getContactInfo() << " ";
-        save << projects[i]->getCrew().getDirector().getName() << " ";
-        save << projects[i]->getCrew().getDirector().getSalery() << " ";
+        projects[i]->setCrew(crew::setDirector(person::setAge(tempProjectHolder.at(11))));
+        projects[i]->setCrew(crew::setDirectorr(person::setContactInfo(tempProjectHolder.at(12))));
+        projects[i]->setCrew(crew::setDirector(person::setName(tempProjectHolder.at(13))));
+        projects[i]->setCrew(crew::setDirector(person::setSalery(tempProjectHolder.at(14))));
+
         //Writer's Info
-        save << projects[i]->getCrew().getWriter().getAge() << " ";
-        save << projects[i]->getCrew().getWriter().getContactInfo() << " ";
-        save << projects[i]->getCrew().getWriter().getName() << " ";
-        save << projects[i]->getCrew().getWriter().getSalery() << " ";
+        projects[i]->setCrew(crew::setWriter(person::setAge(tempProjectHolder.at(15))));
+        projects[i]->setCrew(crew::setWriter(person::setContactInfo(tempProjectHolder.at(16))));
+        projects[i]->setCrew(crew::setWriter(person::setName(tempProjectHolder.at(17))));
+        projects[i]->setCrew(crew::setWriter(person::setSalery(tempProjectHolder.at(18))));
+
         //Costume Designer's Info
-        save << projects[i]->getCrew().getCostumeDesigner().getAge() << " ";
-        save << projects[i]->getCrew().getCostumeDesigner().getContactInfo() << " ";
-        save << projects[i]->getCrew().getCostumeDesigner().getName() << " ";
-        save << projects[i]->getCrew().getCostumeDesigner().getSalery() << " ";
+        projects[i]->setCrew(crew::setCostumeDesigner(person::setAge(tempProjectHolder.at(19))));
+        projects[i]->setCrew(crew::setCostumeDesigner(person::setContactInfo(tempProjectHolder.at(20))));
+        projects[i]->setCrew(crew::setCostumeDesigner(person::setName(tempProjectHolder.at(21))));
+        projects[i]->setCrew(crew::setCostumeDesigner(person::setSalery(tempProjectHolder.at(22))));
+
         //Editor's Info
-        save << projects[i]->getCrew().getEditor().getAge() << " ";
-        save << projects[i]->getCrew().getEditor().getContactInfo() << " ";
-        save << projects[i]->getCrew().getEditor().getName() << " ";
-        save << projects[i]->getCrew().getEditor().getSalery() << " ";
+        projects[i]->setCrew(crew::setEditor(person::setAge(tempProjectHolder.at(23))));
+        projects[i]->setCrew(crew::setEditor(person::setContactInfo(tempProjectHolder.at(24))));
+        projects[i]->setCrew(crew::setEditor(person::setName(tempProjectHolder.at(25))));
+        projects[i]->setCrew(crew::setEditor(person::setSalery(tempProjectHolder.at(26))));
+
         //Production Designer's Info
-        save << projects[i]->getCrew().getProductionDesigner().getAge() << " ";
-        save << projects[i]->getCrew().getProductionDesigner().getContactInfo() << " ";
-        save << projects[i]->getCrew().getProductionDesigner().getName() << " ";
-        save << projects[i]->getCrew().getProductionDesigner().getSalery() << " ";
+        projects[i]->setCrew(crew::setProductionDesigner(person::setAge(tempProjectHolder.at(27))));
+        projects[i]->setCrew(crew::setProductionDesigner(person::setContactInfo(tempProjectHolder.at(28))));
+        projects[i]->setCrew(crew::setProductionDesigner(person::setName(tempProjectHolder.at(29))));
+        projects[i]->setCrew(crew::setProductionDesigner(person::setSalery(tempProjectHolder.at(30))));
+
         //Set Decorator's Info
-        save << projects[i]->getCrew().getSetDecorator.getAge() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getContactInfo() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getName() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getSalery() << " ";
-        save << projects[i]->getListOfFilmingLocations() << " ";
-        save << projects[i]->getCrew().getCast() << " ";
-        save << projects[i]->getListOfKeywords() << "\n";
+        projects[i]->setCrew(crew::setSetDecorator(person::setAge(tempProjectHolder.at(31))));
+        projects[i]->setCrew(crew::setSetDecorator(person::setContactInfo(tempProjectHolder.at(32))));
+        projects[i]->setCrew(crew::setSetDecorator(person::setName(tempProjectHolder.at(33))));
+        projects[i]->setCrew(crew::setSetDecorator(person::setSalery(tempProjectHolder.at(34))));
 
-    }
-
-    //close file
-}
-
-void Read(QString fileName)
-{
-    QFile myFile(fileName);
-
-    if(!myFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        qDebug() << "Could not open the file";
-        return;
-    }
-
-    QTextStream reading(&myFile);
-    //reading.setCodec("UTF-8");
-
-    while(!reading.atEnd())
-   // for(int i = 0; i < 5; i++)
-    {
-        QString myText = reading.readLine();
-
-        QRegExp rx("[, \n]"); // match a comma or a space
-        QStringList list = myText.split(rx, QString::SkipEmptyParts);
-        for(int x = 0; x < list.size(); x++)
-        {
-            qDebug() << list.at(x);
-        }
+        projects[i]->setListOfFilmingLocations(tempProjectHolder.at(35));
+        projects[i]->setCrew(crew::setCast(tempProjectHolder.at(36));
+        projects[i]->setListOfKeywords(tempProjectHolder.at(37));
 
     }
 
     myFile.close();
+    //close file
 }
