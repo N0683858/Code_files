@@ -34,7 +34,7 @@ vector<project*> dataHolder::getProjectList()
     return projects;
 }
 
-void dataHolder::save() //takes value "QString fileName"
+void dataHolder::save() //could take value "QString fileName"
 {
     //open file
     //Make sure the file opened successfully
@@ -66,7 +66,7 @@ void dataHolder::save() //takes value "QString fileName"
         save << projects[i]->getMainLanguage() << " ";
         save << projects[i]->getSummary() << " ";
         save << projects[i]->getReleaseDate() << " ";
-        //save << projects[i]->getCrew().getCast() << " "; //sholdn't this have more functions? not sure if this is right
+
         //Producer's Info
         save << projects[i]->getCrew().getProducer().getAge() << " ";
         save << projects[i]->getCrew().getProducer().getContactInfo() << " ";
@@ -103,7 +103,12 @@ void dataHolder::save() //takes value "QString fileName"
         save << projects[i]->getCrew().getSetDecorator.getName() << " ";
         save << projects[i]->getCrew().getSetDecorator.getSalery() << " ";
         save << projects[i]->getListOfFilmingLocations() << " ";
-        save << projects[i]->getCrew().getCast() << " ";
+        //Cast Info
+        save << projects[i]->getCrew().getCast()[i].getAge() << " ";
+        save << projects[i]->getCrew().getCast()[i].getContactInfo() << " ";
+        save << projects[i]->getCrew().getCast()[i].getName() << " ";
+        save << projects[i]->getCrew().getCast()[i].getSalery() << " ";
+
         save << projects[i]->getListOfKeywords() << "\n";
     }
 
@@ -137,13 +142,22 @@ void dataHolder::load()
         QString temptIDholder = tempProjectHolder.at(0);
         int convertedID = temptIDholder.toInt();
         //reading the data into the right variables from the list string
-        projects[i]->setId(convertedID);
+        project* newProject = new project;
+        addProject(newProject);
+        newProject->setId(convertedID);
+        newProject->setTitle(tempProjectHolder[0]);
         projects[i]->setTitle(tempProjectHolder.at(1));//getting second item from the list which should be the title and then so on
         projects[i]->setGenre(tempProjectHolder.at(2));
         projects[i]->setRuntime(tempProjectHolder.at(3));
         projects[i]->setMainLanguage(tempProjectHolder.at(4));
         projects[i]->setSummary(tempProjectHolder.at(5));
         projects[i]->setReleaseDate(tempProjectHolder.at(6));
+
+        //Cast Info
+        save << projects[i]->getCrew().getCast()[i].getAge() << " ";
+        save << projects[i]->getCrew().getCast()[i].getContactInfo() << " ";
+        save << projects[i]->getCrew().getCast()[i].getName() << " ";
+        save << projects[i]->getCrew().getCast()[i].getSalery() << " ";
 
         //Producer's Info
         //projects[i]->setCrew(project::setProducer(tempProjectHolder.at(7), tempProjectHolder.at(8), tempProjectHolder.at(9), tempProjectHolder.at(10)));//wouldn set Crew needs to take more values
@@ -162,7 +176,7 @@ void dataHolder::load()
         projects[i]->setCrew(crew::setDirector(person::setSalery(tempProjectHolder.at(14))));
 
         //Writer's Info
-        projects[i]->setCrew(crew::setWriter(person::setAge(tempProjectHolder.at(15))));
+        projects[i]->setCrew(crew::setWriter(person::setAge(tempProjectHolder.at(15)))); 
         projects[i]->setCrew(crew::setWriter(person::setContactInfo(tempProjectHolder.at(16))));
         projects[i]->setCrew(crew::setWriter(person::setName(tempProjectHolder.at(17))));
         projects[i]->setCrew(crew::setWriter(person::setSalery(tempProjectHolder.at(18))));
