@@ -138,13 +138,14 @@ void dataHolder::load()
     }
 
     QTextStream loading(&myFile);
-    int num_of_projects = loading.readLine().toInt(); //get the number of projects to create for loop
+    QString num_of_projects = loading.readLine(); //get the number of projects to create for loop
+    int totalProjects = num_of_projects.simplified().toInt();//gets rid of /n and then converts it into int
 
-    for(size_t i = 0; i < num_of_projects; i++)
+    for(size_t i = 0; i < totalProjects; i++)
     {
-        QString loadProject = reading.readLine();//read the next line from the file
+        QString loadProject = loading.readLine();//read the next line from the file
         QRegExp rx("[, \n]"); // match a comma or a space etc. so basically anything you want to ingore want not be read in
-        QStringList tempProjectHolder = loadProject.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.
+        QStringList tempProjectHolder = loadProject.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.if this dont work look at QString::Simplified();
         //convert the string to Int
         QString temptIDholder = tempProjectHolder.at(0);
         int convertedID = temptIDholder.toInt();
@@ -260,16 +261,26 @@ void dataHolder::load()
         newProject->setListOfKeywords(tempProjectHolder.at(36));
 
         //Cast Info
-
-
-        int projectCast = projects[i]->getCrew().getCast().size();
-        save << projectCast << " ";
-        for(int x = 0; x < projectCast; x++)
+        QString numOfCast = loading.readLine();//get number of Cast members
+        int totalCast = numOfCast.simplified().toInt(); //to be used in the loop
+        QString getCastData = loading.readLine();//read the next line from the file which should be all cast members
+        QRegExp rx("[, \n]"); // match a comma or a space etc. so basically anything you want to ingore want not be read in
+        QStringList tempCastHolder = getCast.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.
+        int numCount = 0;
+        for(int x = 0; x < totalCast; x++)
         {
-            save << projects[i]->getCrew().getCast()[x].getAge() << " ";
-            save << projects[i]->getCrew().getCast()[x].getContactInfo() << " ";
-            save << projects[i]->getCrew().getCast()[x].getName() << " ";
-            save << projects[i]->getCrew().getCast()[x].getSalery() << " ";
+            QString castAge = getCastData.at(x + numCount);
+            int convertedCastAge = castAge.toInt();
+            numCount++;
+            QString castContactInfo = getCastData.at(x + numCount);
+            numCount++;
+            QString castName = getCastData.at(x + numCount);
+            numCount++;
+            QString castSalary = getCastData.at(x + numCount);
+            numCount++;
+            float_t convertedCastSal = castSalary.toFloat();
+
+            newProject->setCrew(setNewCrew->setCast(convertedCastAge,castContactInfo,castName,convertedCastSal););//you should change the "setCast" function so that it creates a new person object and pushes theses values into the vector, its easier that way i think
         }
 
     }
