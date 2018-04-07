@@ -102,14 +102,21 @@ void dataHolder::save() //could take value "QString fileName"
         save << projects[i]->getCrew().getSetDecorator.getContactInfo() << " ";
         save << projects[i]->getCrew().getSetDecorator.getName() << " ";
         save << projects[i]->getCrew().getSetDecorator.getSalery() << " ";
-        save << projects[i]->getListOfFilmingLocations() << " ";
-        //Cast Info
-        save << projects[i]->getCrew().getCast()[i].getAge() << " ";
-        save << projects[i]->getCrew().getCast()[i].getContactInfo() << " ";
-        save << projects[i]->getCrew().getCast()[i].getName() << " ";
-        save << projects[i]->getCrew().getCast()[i].getSalery() << " ";
 
+        save << projects[i]->getListOfFilmingLocations() << " ";
         save << projects[i]->getListOfKeywords() << "\n";
+        //Cast Info
+        int projectCast = projects[i]->getCrew().getCast().size();
+        save << projectCast << " ";
+        for(int x = 0; x < projectCast; x++)
+        {
+            save << projects[i]->getCrew().getCast()[x].getAge() << " ";
+            save << projects[i]->getCrew().getCast()[x].getContactInfo() << " ";
+            save << projects[i]->getCrew().getCast()[x].getName() << " ";
+            save << projects[i]->getCrew().getCast()[x].getSalery() << " ";
+        }
+
+        save << "\n";
     }
 
 
@@ -236,32 +243,34 @@ void dataHolder::load()
         newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setSalery(convertedProDesignerSal);));
 
         //Set Decorator's Info
-        QString setDecoratorAge = tempProjectHolder.at(27);
-        int convertedSetDecoratorAge = proDesignerAge.toInt();
-        QString setDecoratorContactInfo = tempProjectHolder.at(28);
-        QString setDecoratorName = tempProjectHolder.at(29);
-        QString proDesignerSalery = tempProjectHolder.at(30);
-        int convertedProDesignerSal = proDesignerSalery.toFloat();
+        QString setDecoratorAge = tempProjectHolder.at(31);
+        int convertedSetDecoratorAge = setDecoratorAge.toInt();
+        QString setDecoratorContactInfo = tempProjectHolder.at(32);
+        QString setDecoratorName = tempProjectHolder.at(33);
+        QString setDecoratorSalery = tempProjectHolder.at(34);
+        int convertedSetDecoratorSal = setDecoratorSalery.toFloat();
 
-        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setAge(convertedProDesignerAge)));
-        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setContactInfo(proDesignerContactInfo);));
-        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setName(proDesignerName);));
-        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setSalery(convertedProDesignerSal);));
+        newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setAge(convertedSetDecoratorAge)));
+        newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setContactInfo(setDecoratorContactInfo);));
+        newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setName(setDecoratorName);));
+        newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setSalery(convertedSetDecoratorSal);));
 
-        projects[i]->setCrew(crew::setSetDecorator(person::setAge(tempProjectHolder.at(31))));
-        projects[i]->setCrew(crew::setSetDecorator(person::setContactInfo(tempProjectHolder.at(32))));
-        projects[i]->setCrew(crew::setSetDecorator(person::setName(tempProjectHolder.at(33))));
-        projects[i]->setCrew(crew::setSetDecorator(person::setSalery(tempProjectHolder.at(34))));
 
-        projects[i]->setListOfFilmingLocations(tempProjectHolder.at(35));
-        projects[i]->setCrew(crew::setCast(tempProjectHolder.at(36));
+        newProject->setListOfFilmingLocations(tempProjectHolder.at(35));
+        newProject->setListOfKeywords(tempProjectHolder.at(36));
 
-                //Cast Info
-                save << projects[i]->getCrew().getCast()[i].getAge() << " ";
-                save << projects[i]->getCrew().getCast()[i].getContactInfo() << " ";
-                save << projects[i]->getCrew().getCast()[i].getName() << " ";
-                save << projects[i]->getCrew().getCast()[i].getSalery() << " ";
-        projects[i]->setListOfKeywords(tempProjectHolder.at(37));
+        //Cast Info
+
+
+        int projectCast = projects[i]->getCrew().getCast().size();
+        save << projectCast << " ";
+        for(int x = 0; x < projectCast; x++)
+        {
+            save << projects[i]->getCrew().getCast()[x].getAge() << " ";
+            save << projects[i]->getCrew().getCast()[x].getContactInfo() << " ";
+            save << projects[i]->getCrew().getCast()[x].getName() << " ";
+            save << projects[i]->getCrew().getCast()[x].getSalery() << " ";
+        }
 
     }
 
