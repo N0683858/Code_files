@@ -236,6 +236,18 @@ void dataHolder::load()
         newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setSalery(convertedProDesignerSal);));
 
         //Set Decorator's Info
+        QString setDecoratorAge = tempProjectHolder.at(27);
+        int convertedSetDecoratorAge = proDesignerAge.toInt();
+        QString setDecoratorContactInfo = tempProjectHolder.at(28);
+        QString setDecoratorName = tempProjectHolder.at(29);
+        QString proDesignerSalery = tempProjectHolder.at(30);
+        int convertedProDesignerSal = proDesignerSalery.toFloat();
+
+        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setAge(convertedProDesignerAge)));
+        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setContactInfo(proDesignerContactInfo);));
+        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setName(proDesignerName);));
+        newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setSalery(convertedProDesignerSal);));
+
         projects[i]->setCrew(crew::setSetDecorator(person::setAge(tempProjectHolder.at(31))));
         projects[i]->setCrew(crew::setSetDecorator(person::setContactInfo(tempProjectHolder.at(32))));
         projects[i]->setCrew(crew::setSetDecorator(person::setName(tempProjectHolder.at(33))));
