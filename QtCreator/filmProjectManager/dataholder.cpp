@@ -98,14 +98,15 @@ void dataHolder::save() //could take value "QString fileName"
         save << projects[i]->getCrew().getProductionDesigner().getName() << " ";
         save << projects[i]->getCrew().getProductionDesigner().getSalery() << " ";
         //Set Decorator's Info
-        save << projects[i]->getCrew().getSetDecorator.getAge() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getContactInfo() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getName() << " ";
-        save << projects[i]->getCrew().getSetDecorator.getSalery() << " ";
+        save << projects[i]->getCrew().getSetDecorator().getAge() << " ";
+        save << projects[i]->getCrew().getSetDecorator().getContactInfo() << " ";
+        save << projects[i]->getCrew().getSetDecorator().getName() << " ";
+        save << projects[i]->getCrew().getSetDecorator().getSalery() << " ";
 
         save << projects[i]->getListOfFilmingLocations() << " ";
         save << projects[i]->getListOfKeywords() << "\n";
         //Cast Info
+        //Save all the cast members for the project in a new line underneath so its easier to read it all back in
         int projectCast = projects[i]->getCrew().getCast().size();
         save << projectCast << " ";
         for(int x = 0; x < projectCast; x++)
@@ -169,7 +170,7 @@ void dataHolder::load()
         QString producerContactInfo = tempProjectHolder.at(8);
         QString producerName = tempProjectHolder.at(9);
         QString producerSalery = tempProjectHolder.at(10);
-        int convertedProucerSal = producerSalery.toFloat();
+        float_t convertedProucerSal = producerSalery.toFloat();
 
         crew* setNewCrew = new crew;
         person* newPerson = new person;
@@ -184,7 +185,7 @@ void dataHolder::load()
         QString directorContactInfo = tempProjectHolder.at(12);
         QString directorName = tempProjectHolder.at(13);
         QString directorSalery = tempProjectHolder.at(14);
-        int convertedDirectorSal = directorSalery.toFloat();
+        float_t convertedDirectorSal = directorSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setDirector(newPerson->setAge(convertedDirectorAge)));
         newProject->setCrew(setNewCrew->setDirector(newPerson->setContactInfo(directorContactInfo);));
@@ -197,7 +198,7 @@ void dataHolder::load()
         QString writerContactInfo = tempProjectHolder.at(16);
         QString writerName = tempProjectHolder.at(17);
         QString writerSalery = tempProjectHolder.at(18);
-        int convertedWriterSal = writerSalery.toFloat();
+        float_t convertedWriterSal = writerSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setWriter(newPerson->setAge(convertedWriterAge)));
         newProject->setCrew(setNewCrew->setWriter(newPerson->setContactInfo(writerContactInfo);));
@@ -210,7 +211,7 @@ void dataHolder::load()
         QString costDesignerContactInfo = tempProjectHolder.at(20);
         QString costDesignerName = tempProjectHolder.at(21);
         QString costDesignerSalery = tempProjectHolder.at(22);
-        int convertedCostDesignerSal = costDesignerSalery.toFloat();
+        float_t convertedCostDesignerSal = costDesignerSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setCostumeDesigner(newPerson->setAge(convertedCostDesignerAge)));
         newProject->setCrew(setNewCrew->setCostumeDesigner(newPerson->setContactInfo(costDesignerContactInfo);));
@@ -223,7 +224,7 @@ void dataHolder::load()
         QString editorContactInfo = tempProjectHolder.at(24);
         QString editorName = tempProjectHolder.at(25);
         QString editorSalery = tempProjectHolder.at(26);
-        int convertedEditorSal = editorSalery.toFloat();
+        float_t convertedEditorSal = editorSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setEditor(newPerson->setAge(convertedEditorAge)));
         newProject->setCrew(setNewCrew->setEditor(newPerson->setContactInfo(editorContactInfo);));
@@ -236,7 +237,7 @@ void dataHolder::load()
         QString proDesignerContactInfo = tempProjectHolder.at(28);
         QString proDesignerName = tempProjectHolder.at(29);
         QString proDesignerSalery = tempProjectHolder.at(30);
-        int convertedProDesignerSal = proDesignerSalery.toFloat();
+        float_t convertedProDesignerSal = proDesignerSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setAge(convertedProDesignerAge)));
         newProject->setCrew(setNewCrew->setProductionDesigner(newPerson->setContactInfo(proDesignerContactInfo);));
@@ -249,7 +250,7 @@ void dataHolder::load()
         QString setDecoratorContactInfo = tempProjectHolder.at(32);
         QString setDecoratorName = tempProjectHolder.at(33);
         QString setDecoratorSalery = tempProjectHolder.at(34);
-        int convertedSetDecoratorSal = setDecoratorSalery.toFloat();
+        float_t convertedSetDecoratorSal = setDecoratorSalery.toFloat();
 
         newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setAge(convertedSetDecoratorAge)));
         newProject->setCrew(setNewCrew->setSetDecorator(newPerson->setContactInfo(setDecoratorContactInfo);));
@@ -265,19 +266,18 @@ void dataHolder::load()
         int totalCast = numOfCast.simplified().toInt(); //to be used in the loop
         QString getCastData = loading.readLine();//read the next line from the file which should be all cast members
         QRegExp rx("[, \n]"); // match a comma or a space etc. so basically anything you want to ingore want not be read in
-        QStringList tempCastHolder = getCast.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.
+        QStringList tempCastHolder = getCastData.split(rx, QString::SkipEmptyParts);//save the string without including any of the spaces and commas etc.
         int numCount = 0;
         for(int x = 0; x < totalCast; x++)
         {
-            QString castAge = getCastData.at(x + numCount);
+            QString castAge = tempCastHolder.at(x + numCount);
             int convertedCastAge = castAge.toInt();
             numCount++;
-            QString castContactInfo = getCastData.at(x + numCount);
+            QString castContactInfo = tempCastHolder.at(x + numCount);
             numCount++;
-            QString castName = getCastData.at(x + numCount);
+            QString castName = tempCastHolder.at(x + numCount);
             numCount++;
-            QString castSalary = getCastData.at(x + numCount);
-            numCount++;
+            QString castSalary = tempCastHolder.at(x + numCount);
             float_t convertedCastSal = castSalary.toFloat();
 
             newProject->setCrew(setNewCrew->setCast(convertedCastAge,castContactInfo,castName,convertedCastSal););//you should change the "setCast" function so that it creates a new person object and pushes theses values into the vector, its easier that way i think
