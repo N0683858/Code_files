@@ -4,38 +4,81 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Bon Appétit</title>
-    <link href="Styles/Master.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/Master.css" />
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header>
-        <img src="Images/banner.jpg" alt="Halloween Store banner" /><br />
+    <!-- Header and the title of Website -->
+    <header id="header" class="alt">
+        <div class="inner">
+			<h1>Bon Appétit</h1>
+			<p>The worlds best restaurant website </p>
+		</div>
     </header>
-    <aside>
-        <nav>
-            <ul>
-                <li><asp:HyperLink NavigateUrl="~/index.aspx" runat="server">Home</asp:HyperLink></li>
-                <li><asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">Order</asp:HyperLink></li>
-                <li><asp:HyperLink NavigateUrl="~/Cart.aspx" runat="server">Your Cart</asp:HyperLink></li>
-                <li><asp:HyperLink NavigateUrl="" runat="server">About</asp:HyperLink></li>
-            </ul>
-        </nav>
-    </aside>
-    <section>
-        <form id="form" runat="server">
-            <%--a label within an h1 element that will be exposed--%>
-            <h1><asp:Label ID="lblH1" runat="server"></asp:Label></h1>
+    
+    <!-- Navigation Bar -->
+    <div id = "navbar">
+        <asp:HyperLink NavigateUrl="" runat="server" BorderStyle="None">Report</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Cart.aspx" runat="server" BorderStyle="None">Shopping Cart</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Order.aspx" runat="server" BorderStyle="None">Order</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/index.aspx" runat="server" BorderStyle="None">Home</asp:HyperLink>
+        
+        
+        
+    </div>      
+    <!-- Navigation Bar End -->
 
-            <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">        
+<!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Banner -->
+	    <section id="intro" class="main">
+		    <span class="icon fa-diamond major"></span>
+		    <h2>Magna porta maximus</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae<br />
+		    malesuada turpis. Nam pellentesque in ac aliquam. Aliquam tempor<br />
+		    mi porta egestas maximus lorem ipsum dolor.</p>
+		    <ul class="actions">
+			    <li><a href="#" class="button big">Learn More</a></li>
+		    </ul>
+	    </section>
+        <!-- Banner End -->
+
+        <section>
+            <form id="form" runat="server">
+                <%--a label within an h1 element that will be exposed--%>
+                <h1><asp:Label ID="lblH1" runat="server"></asp:Label></h1>
+
+                <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">        
+                </asp:ContentPlaceHolder> 
+            </form>
+        </section>   
+        <footer> 
+            <asp:ContentPlaceHolder id="footerPlaceHolder" runat="server">
+                <%--the default content for the footer that can be overridden--%>     
+                <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label>          
             </asp:ContentPlaceHolder> 
-        </form>
-    </section>   
-    <footer> 
-        <asp:ContentPlaceHolder id="footerPlaceHolder" runat="server">
-            <%--the default content for the footer that can be overridden--%>     
-            <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label>          
-        </asp:ContentPlaceHolder> 
-    </footer>     
+        </footer>  
+    </div>
+<!-- Wrapper End -->
+
+<!-- JavaScript -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>
