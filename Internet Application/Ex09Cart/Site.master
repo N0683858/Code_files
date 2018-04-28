@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Chapter 9: Shopping Cart</title>
+    <title>Bon Appétit</title>
     <link href="Styles/Master.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
@@ -15,9 +15,9 @@
     <aside>
         <nav>
             <ul>
-                <li><asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">Home</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/index.aspx" runat="server">Home</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">Order</asp:HyperLink></li>
                 <li><asp:HyperLink NavigateUrl="~/Cart.aspx" runat="server">Your Cart</asp:HyperLink></li>
-                <li><asp:HyperLink NavigateUrl="" runat="server">Services</asp:HyperLink></li>
                 <li><asp:HyperLink NavigateUrl="" runat="server">About</asp:HyperLink></li>
             </ul>
         </nav>
