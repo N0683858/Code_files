@@ -1,0 +1,36 @@
+﻿#ddlProducts {
+    width: 15em;
+    margin-top: 1em;
+}
+#productData {
+    padding: 1em 0;
+    width: 493px;
+    float: left;
+    height: 504px;
+}
+#imgProduct {
+    float: left;
+    padding: 1em 2em;
+}
+
+#lblName, #lblUnitPrice {
+    display: block;
+    font-size: 125%;
+    font-weight: bold;
+}
+#lblName, #lblShortDescription, #lblLongDescription {
+    display: block;
+    margin-bottom: 1em;
+}
+#lblLongDescription {
+    margin-bottom: 2em;
+}
+#lblUnitPrice {
+    margin-bottom: 2em;
+}
+#txtQuantity {
+    margin-bottom: 1em;
+}
+#btnAdd {
+    margin-right: 1em;
+}
