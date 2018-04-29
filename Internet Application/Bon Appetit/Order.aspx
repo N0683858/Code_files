@@ -16,7 +16,7 @@
         <asp:Label ID="lblLongDescription" runat="server" Text="Label"></asp:Label>
         <asp:Label ID="lblUnitPrice" runat="server" Text="Label"></asp:Label>
         <label id="lblQuantity">Quantity&nbsp;</label>
-        <asp:TextBox ID="txtQuantity" runat="server" Width="170px" OnTextChanged="txtQuantity_TextChanged"></asp:TextBox>   
+        <asp:TextBox ID="txtQuantity" runat="server"></asp:TextBox>   
         <asp:RequiredFieldValidator ID="rfvQuantity" runat="server" ErrorMessage="Quantity is required." ControlToValidate="txtQuantity" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>       
         <asp:RangeValidator ID="rgvQuantity" runat="server" ErrorMessage="Must be between 1 and 500." ControlToValidate="txtQuantity" CssClass="validator" Display="Dynamic" MaximumValue="500" MinimumValue="1" Type="Integer"></asp:RangeValidator>
         <br />

@@ -23,6 +23,8 @@
     
     <!-- Navigation Bar -->
     <div id = "navbar">
+        
+        <a href="index.aspx" id="logo"><img src="Images/logo.png" width="400" height="80"/></a> 
         <asp:HyperLink NavigateUrl="~/Cart.aspx" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
         <asp:HyperLink NavigateUrl="" runat="server" BorderStyle="None">Report</asp:HyperLink>
         <asp:HyperLink NavigateUrl="" runat="server" BorderStyle="None">Menu</asp:HyperLink>        

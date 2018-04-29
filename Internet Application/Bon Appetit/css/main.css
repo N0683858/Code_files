@@ -5,8 +5,19 @@
 /* Style the navbar */
 #navbar {
     overflow: hidden;
-    background-color: #333;   
+    background-color: #333;
     z-index: 2;
+    text-decoration: none;
+}
+
+#navbar #logo {
+    float: left;
+    padding-left:10px;
+    padding-bottom:0px;
+    margin:0em;
+    text-decoration: none;
+
+
 }
 
 /* Navbar links */
@@ -15,7 +26,8 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px;
+  padding: 18px;
+  margin-top: 0.5em;
   text-decoration: none;
   font-weight:500;
 }
