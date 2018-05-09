@@ -12,7 +12,7 @@ public partial class Site : System.Web.UI.MasterPage
         set { lblH1.Text = value; }
     }
 
-    protected void Page_Load(object sender, EventArgs e)
+   /* protected void Page_Load(object sender, EventArgs e)
     {
         //fill 'Days Until' label if it hasn't been overridden
         if (lblDaysUntilHalloween != null)
@@ -41,5 +41,5 @@ public partial class Site : System.Web.UI.MasterPage
             halloween = halloween.AddYears(1);
         TimeSpan ts = halloween - DateTime.Today;
         return ts.Days;
-    }
+    }*/
 }

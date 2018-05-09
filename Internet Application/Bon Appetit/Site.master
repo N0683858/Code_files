@@ -9,9 +9,7 @@
 	<link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/Master.css" />
     <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -61,13 +59,14 @@
 			    <p class="copyright">Copyright &copy;. Bon Appétit. Since 1997. </p>
             <asp:ContentPlaceHolder id="footerPlaceHolder" runat="server">
                 <%--the default content for the footer that can be overridden--%>     
-               <!-- <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label> -->                 
+               <!-- <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label> --> 
+                
             </asp:ContentPlaceHolder> 
         </footer>  
     </div>
 <!-- Wrapper End -->
 
-<!-- JavaScript -->
+<!-- JavaScript for NavBar-->
 <script>
 window.onscroll = function() {StickyNavBar()};
 
@@ -82,9 +81,5 @@ function StickyNavBar() {
   }
     }
 </script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

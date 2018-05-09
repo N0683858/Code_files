@@ -23,9 +23,9 @@
         <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add to Cart" CssClass="button" />
         <asp:Button ID="btnCart" runat="server" CausesValidation="False" PostBackUrl="~/Cart.aspx" Text="Go to Cart" CssClass="button" />
     </div>
-    <asp:Image ID="imgProduct" runat="server" Height="267px" Width="299px" /> 
+    <asp:Image ID="imgProduct" runat="server" /> 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="footerPlaceHolder">
-    Your Shopping Page
+    
 </asp:Content>
 

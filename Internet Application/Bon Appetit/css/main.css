@@ -1,6 +1,11 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /***************************   Navigation Bar   ******************************/
 /* Style the navbar */
 #navbar {
