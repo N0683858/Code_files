@@ -8,9 +8,9 @@
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <asp:ListBox ID="lstCart" runat="server"></asp:ListBox>
     <div id="cartbuttons">               
-        <asp:Button ID="btnRemove" runat="server" CssClass="button" Text="Remove Item" OnClick="btnRemove_Click" />
+        <asp:Button ID="btnRemove" runat="server" CssClass="button" Text="Remove Item" OnClick="btnRemove_Click" Width="187px" />
         <br />
-        <asp:Button ID="btnEmpty" runat="server" CssClass="button" Text="Empty Cart" OnClick="btnEmpty_Click" />               
+        <asp:Button ID="btnEmpty" runat="server" CssClass="button" Text="Empty Cart" OnClick="btnEmpty_Click" Width="187px" />               
     </div>
     <div id="shopbuttons">              
         <asp:Button ID="btnContinue" runat="server" CssClass="button" PostBackUrl="~/Order.aspx" Text="Continue Shopping" />

@@ -5,12 +5,13 @@
 #productData {
     padding: 1em 0;
     width: 493px;
-    float: left;
+    display:inline-block;
     height: 504px;
 }
 #imgProduct {
-    float: left;
     padding: 1em 2em;
+    width: 40%;
+    float:right;
 }
 
 #lblName, #lblUnitPrice {

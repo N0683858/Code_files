@@ -12,8 +12,7 @@
 /* The styles for the buttons to the right of the cart */
 #btnRemove, #btnEmpty {
     margin-left: 1em;
-    width: 10em;
-}
+    }
 #btnRemove {
     margin-bottom: 1em;
 }
