@@ -61,10 +61,11 @@ r #logo {
 
 /* Page content */
 
-/* Page content */
+
 .content {
   padding: 16px;
 }
+/* Page content */
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -78,7 +79,17 @@ r #logo {
   padding-top: 60px;
 }
 
-/***************************   Navigation Bar End   ******************************/
+/***************************   Registration Page  ******************************/
+
+#registeration_pg {
+    margin-left: 26em;
+
+}
+
+
+
+
+
 
 /* Reset */
 
