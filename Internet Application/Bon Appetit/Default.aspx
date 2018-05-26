@@ -12,6 +12,9 @@
             <asp:LoginStatus ID="LoginStatus2" runat="server" />
         </LoggedInTemplate>
     </asp:LoginView>
+    <br />
+    <br />
+    <a href="ChangePassword.apx">Change Password.</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footerPlaceHolder" Runat="Server">
 </asp:Content>

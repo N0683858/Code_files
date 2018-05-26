@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+    <link rel="stylesheet" href="css/Login.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <asp:Login ID="Login1" runat="server" Width="411px"  CreateUserText="Register" CreateUserUrl="~/Register.aspx" DestinationPageUrl="~/Default.aspx" Font-Names="Verdana" Font-Size="0.8em" TextLayout="TextOnTop" BorderPadding="5">

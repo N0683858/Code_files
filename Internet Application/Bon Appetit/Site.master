@@ -7,7 +7,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/Master.css" />
 	<link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css" />
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 	<asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
@@ -26,11 +25,18 @@
 	<div id = "navbar">
 		
 		<div id="logo"><img src="Images/logo.png" id="text-logo"/></div>
-		<asp:HyperLink NavigateUrl="~/Cart.aspx" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
-		<asp:HyperLink NavigateUrl="" runat="server" BorderStyle="None">Report</asp:HyperLink>
-		<asp:HyperLink NavigateUrl="~/Menu.aspx" runat="server" BorderStyle="None">Menu</asp:HyperLink>        
-		<asp:HyperLink NavigateUrl="~/Order.aspx" runat="server" BorderStyle="None">Order</asp:HyperLink>
-		<asp:HyperLink NavigateUrl="~/index.aspx" runat="server" BorderStyle="None">Home</asp:HyperLink> 
+		<asp:HyperLink NavigateUrl="~/index.aspx" CssClass="links" runat="server" BorderStyle="None">Home</asp:HyperLink>
+		<asp:HyperLink NavigateUrl="~/Menu.aspx" CssClass="links" runat="server" BorderStyle="None">Menu</asp:HyperLink>
+		<asp:HyperLink NavigateUrl="~/Order.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
+		<asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Cart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Register</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Login</asp:HyperLink>    
+		
+		
+				
+		
+		 
 	</div>      
 	<!-- Navigation Bar End -->
 

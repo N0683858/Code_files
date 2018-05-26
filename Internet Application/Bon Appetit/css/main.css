@@ -16,10 +16,10 @@
 	height: auto;
 }
 
-#navbar #logo {
+r #logo {
 	float: left;
 	padding: 0em;
-	margin: 0em;
+	margin: 0.3em;
 	/*max-width: 15%;
 	max-height: 100%;*/
 }
@@ -34,17 +34,32 @@
 }
 
 
-/* Navbar links */
-#navbar a {
-	float: right;
+/* Navbar links left */
+#navbar .links {
+	float: left;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 1em;
+	margin-left: 1em;
 	text-decoration: none;
 	font-weight: 500;
 	font-size: 140%; 
 }
+
+/* Navbar links right*/
+#navbar .LogReg {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 140%;
+}
+
+/* Page content */
 
 /* Page content */
 .content {
