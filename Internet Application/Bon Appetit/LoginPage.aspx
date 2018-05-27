@@ -1,8 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="RegisterationPage.aspx.cs" Inherits="LoginPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="LoginPage.aspx.cs" Inherits="LoginPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+    
+    <!-- when your register it will display a message -->
+    <asp:Label runat="server" ID="msg_lbl" /> 
     <div id="registeration_pg" class="panel panel-primary">
         <div class="panel-heading">User Registeration</div>
 
@@ -14,7 +17,7 @@
             <br />
             <label>Last Name: <asp:TextBox ID="lastname_tb" runat="server" CssClass="form-control" /></label>
             <br />
-            <label>Password: <asp:TextBox ID="password_tb" runat="server" CssClass="form-control" /></label>
+            <label>Password: <asp:TextBox ID="password_tb" TextMode="Password" runat="server" CssClass="form-control" /></label>
         </div>
 
         <!------------------------------------------    Registeration Button     ------------------------------------->
