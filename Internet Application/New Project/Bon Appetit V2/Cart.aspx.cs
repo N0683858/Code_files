@@ -63,6 +63,6 @@ public partial class Cart : System.Web.UI.Page
     }
     protected void btnCheckOut_Click(object sender, EventArgs e)
     {
-        lblMessage.Text = "That page hasn't been implemented yet.";
+        Response.Redirect("~/CheckOut.aspx");
     }
 }

@@ -11,4 +11,9 @@ public partial class Register : System.Web.UI.Page
     {
 
     }
+
+    protected void UserName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
