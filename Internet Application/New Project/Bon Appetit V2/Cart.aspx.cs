@@ -18,7 +18,6 @@ public partial class Cart : System.Web.UI.Page
         //and set master page logo image tool tip
         if (!IsPostBack) {
             this.DisplayCart();
-            this.Master.PageH1Text = "Your Shopping Cart";
         }
     }
 

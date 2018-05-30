@@ -21,7 +21,6 @@ public partial class Order : System.Web.UI.Page
         lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
         imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
 
-        this.Master.PageH1Text = "Your Shopping Page";
     }
 
     private Product GetSelectedProduct()
