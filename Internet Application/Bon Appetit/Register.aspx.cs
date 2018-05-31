@@ -14,9 +14,9 @@ public partial class Register : System.Web.UI.Page
 
     }
 
-    /*protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
+    protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
     {
-        System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+       /* System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
         cmd.CommandType = System.Data.CommandType.Text;
         cmd.CommandText = "INSERT Users (Username, Password, Email) VALUES (@username, @password, @email)";
         cmd.Connection = sqlConnection1;
@@ -27,6 +27,6 @@ public partial class Register : System.Web.UI.Page
         cmd.Parameters.AddWithValue("@username", );
         cmd.Parameters.AddWithValue("@password", password_tb.Text);
         cmd.ExecuteNonQuery();
-        sqlConnection1.Close();
-    }*/
+        sqlConnection1.Close(); */
+    }
 }
