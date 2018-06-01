@@ -45,10 +45,7 @@
 		
 
 		<section>
-			<form id="form" runat="server">
-				<%--a label within an h1 element that will be exposed--%>
-				
-
+			<form id="form" runat="server">			
 				<asp:ContentPlaceHolder id="formPlaceHolder" runat="server"> 
 					
 				</asp:ContentPlaceHolder> 

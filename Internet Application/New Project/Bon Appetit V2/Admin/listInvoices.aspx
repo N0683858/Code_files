@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="listInvoices.aspx.cs" Inherits="Admin_Invoices" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
-    <link href="listInvoices.css" rel="stylesheet" type="text/css" />
+    <!-- 
+        <link href="../css/listInvoices.css" rel="stylesheet" type="text/css" /> 
+    -->
     <style type="text/css">
 
         .auto-style2 {
