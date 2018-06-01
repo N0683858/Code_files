@@ -2,7 +2,8 @@
 <%@ MasterType VirtualPath="~/Site.master" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">  
-    <link href="css/Order.css" rel="stylesheet" />    
+    <link href="css/Order.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="css/main.css" />
 </asp:Content>
 
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">

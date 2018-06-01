@@ -2,6 +2,7 @@
 <%@ MasterType VirtualPath="~/Site.master" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+    <link rel="stylesheet" href="css/main.css" />
     <link href="css/Cart.css" rel="stylesheet" />
 </asp:Content>
 

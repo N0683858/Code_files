@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="CheckOut.aspx.cs" Inherits="CheckOut" %>
 <%@ MasterType VirtualPath="~/Site.master" %>
 
+<asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+    
+</asp:Content>
+
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <h1>CheckOut</h1>
     

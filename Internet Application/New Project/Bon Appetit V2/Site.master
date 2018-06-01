@@ -6,10 +6,10 @@
 	<title>Bon Appétit</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css" />
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 	<asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
+        <link rel="stylesheet" href="css/main.css" />
 	</asp:ContentPlaceHolder>
 </head>
 <body>
@@ -23,6 +23,8 @@
 	
 	<!-- Navigation Bar -->
 	<div id = "navbar">
+        <asp:ContentPlaceHolder id="navBar" runat="server">
+
 		
 		<div id="logo"><img src="Images/logo.png" id="text-logo"/></div>
 		<asp:HyperLink NavigateUrl="~/index.aspx" CssClass="links" runat="server" BorderStyle="None">Home</asp:HyperLink>
@@ -33,24 +35,22 @@
         <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Register</asp:HyperLink>
         <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Login</asp:HyperLink>    
 		
-		
-				
-		
-		 
+        
+        </asp:ContentPlaceHolder>	 
 	</div>      
 	<!-- Navigation Bar End -->
 
 <!-- Wrapper -->
 	<div id="wrapper">
-		
-
 		<section>
 			<form id="form" runat="server">			
 				<asp:ContentPlaceHolder id="formPlaceHolder" runat="server"> 
 					
 				</asp:ContentPlaceHolder> 
 			</form>
-		</section>   
+		</section>  
+        
+
 		<footer id="footer"> 
 			<ul class="icons">
 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>

@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeFile="index.aspx.vb" Inherits="index" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+<asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+    <link rel="stylesheet" href="css/indexPage.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+
     <!-- Banner -->
     <section id="intro" class="main">
         <span class="icon fa-diamond major"></span>
