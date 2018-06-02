@@ -7,7 +7,7 @@
 	<section class="main items">
 		<article class="item">
 			<header>
-				<a href="#"><img src="images/burg.jpg" width="450px"; alt="" /></a>
+				<a href="#"><img src="images/burg.jpg" width="690px"; alt="" /></a>
 				<h3>Hawaiian Burgers</h3>
 			</header>
 			<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>

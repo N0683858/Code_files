@@ -1,16 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="navBar" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="footerPlaceHolder" Runat="Server">
+</asp:Content>
+

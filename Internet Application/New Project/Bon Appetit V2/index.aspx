@@ -31,8 +31,8 @@
     <section class="main items">
 	    <article class="item">
 		    <header>
-			    <a href="#"><img src="images/pic01.jpg" alt="" /></a>
-			    <h3>Feugiat et faucibus</h3>
+			    <a href="#"><img src="images/burg.jpg" width="100%"; alt="" /></a>
+				<h3>Hawaiian Burgers</h3>
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
