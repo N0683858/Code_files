@@ -5,7 +5,9 @@
     <link href="css/Order.css" rel="stylesheet" /> 
 </asp:Content>
 
+
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+    <section id="intro" class="main">
     <label>Please select a product&nbsp;</label>
     <asp:DropDownList ID="ddlProducts" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource" DataTextField="Name" DataValueField="ProductID">
     </asp:DropDownList>
@@ -24,6 +26,8 @@
         <asp:Button ID="btnCart" runat="server" CausesValidation="False" PostBackUrl="~/Cart.aspx" Text="Go to Cart" CssClass="button" />
     </div>
     <asp:Image ID="imgProduct" runat="server" /> 
+
+    </section>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="footerPlaceHolder">
     

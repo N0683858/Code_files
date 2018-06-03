@@ -19,8 +19,8 @@ public partial class Register : System.Web.UI.Page
 
     Boolean register()
     {
-        SqlConnection sqlConnection1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
-         SqlCommand cmd = new SqlCommand();
+         SqlConnection sqlConnection1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
+        /* SqlCommand cmd = new SqlCommand();
          cmd.CommandType = System.Data.CommandType.Text;
          cmd.CommandText = "INSERT Users (Username, Password, SecurityQesAns) VALUES (@username, @password, @security)";
          cmd.Connection = sqlConnection1;
@@ -32,10 +32,10 @@ public partial class Register : System.Web.UI.Page
          cmd.Parameters.AddWithValue("@password", password_tb.Text);
          cmd.Parameters.AddWithValue("@security", security_tb.Text);
          cmd.ExecuteNonQuery();
-         sqlConnection1.Close();
+         sqlConnection1.Close(); */
          
-
-       /* SqlCommand check_User_Name = new SqlCommand("SELECT COUNT(*) FROM [Users] WHERE ([username] = @user)", sqlConnection1);
+        sqlConnection1.Open();
+        SqlCommand check_User_Name = new SqlCommand("SELECT COUNT(*) FROM [Users] WHERE ([Username] = @user)", sqlConnection1);
         check_User_Name.Parameters.AddWithValue("@user", username_tb.Text);
         int UserExist = (int)check_User_Name.ExecuteScalar();
 
@@ -43,26 +43,27 @@ public partial class Register : System.Web.UI.Page
         {
             //Username exist
             isUsernameValid.Text = "Username already exists!";
+            return false;
         }
         else
         {
             //Username doesn't exist.
+            //create new user data and store it in database 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = "INSERT Users (Username, Password, SecurityAns) VALUES (@username, @password, @security)";
             cmd.Connection = sqlConnection1;
 
-
-
-            sqlConnection1.Open();
             cmd.Parameters.AddWithValue("@username", username_tb.Text);
             cmd.Parameters.AddWithValue("@password", password_tb.Text);
             cmd.Parameters.AddWithValue("@security", password_tb.Text);
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
-        }  */
 
-        return true;
+            return true;
+        }  
+
+        
 
     }
 
@@ -89,6 +90,7 @@ public partial class Register : System.Web.UI.Page
             if (register())
             {
                 msg_lbl.Text = "Registered Successfully!";
+                
             }
             else
             {

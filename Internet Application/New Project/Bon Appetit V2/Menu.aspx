@@ -3,7 +3,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
-	
+	<section id="intro" class="main">
+        <span class="icon fa-diamond major"></span>
+        <h2>Best in the World!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae<br />
+        malesuada turpis. Nam pellentesque in ac aliquam. Aliquam tempor<br />
+        mi porta egestas maximus lorem ipsum dolor.</p>
+        <ul class="actions">
+        <li><a href="#" class="button big">Learn More</a></li>
+        </ul>
+    </section>
+    <section id="intro" class="main">
+        <span class="icon fa-diamond major"></span>
+        <h2>Best in the World!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae<br />
+        malesuada turpis. Nam pellentesque in ac aliquam. Aliquam tempor<br />
+        mi porta egestas maximus lorem ipsum dolor.</p>
+        <ul class="actions">
+        <li><a href="#" class="button big">Learn More</a></li>
+        </ul>
+    </section>
+    <br />
+    <section id="intro" class="main">
+        <span class="icon fa-diamond major"></span>
+        <h2>Best in the World!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae<br />
+        malesuada turpis. Nam pellentesque in ac aliquam. Aliquam tempor<br />
+        mi porta egestas maximus lorem ipsum dolor.</p>
+        <ul class="actions">
+        <li><a href="#" class="button big">Learn More</a></li>
+        </ul>
+    </section>
 	<section class="main items">
 		<article class="item">
 			<header>

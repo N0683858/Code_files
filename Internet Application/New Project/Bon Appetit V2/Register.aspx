@@ -10,7 +10,8 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
      <!-- when your register it will display a message -->
-    <asp:Label runat="server" ID="msg_lbl" /> 
+    <asp:Label runat="server" ID="msg_lbl" />
+    <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
     <div id="registeration_pg" class="panel panel-primary">
         <div class="panel-heading">User Registeration</div>
 
@@ -33,7 +34,7 @@
         <!------------------------------------------    Registeration Button     ------------------------------------->
         <div class="panel-footer">
             <asp:Button runat="server" ID="register_btn" OnClick="register_btn_Click" CssClass="btn btn-primary" Text="Register" />
-            <asp:Label ID="isUsernameValid" runat="server"></asp:Label>
+            
         </div>
 
     </div>

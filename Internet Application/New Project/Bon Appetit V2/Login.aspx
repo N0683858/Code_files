@@ -8,7 +8,8 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
 
-    <asp:Label runat="server" ID="msg_lbl" /> 
+    <asp:Label runat="server" ID="msg_lbl" />
+    <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
     <div id="login_pg" class="panel panel-primary">
         <div class="panel-heading">Login</div>
 
@@ -23,8 +24,7 @@
 
         <!------------------------------------------    Registeration Button     ------------------------------------->
         <div class="panel-footer">
-            <asp:Button runat="server" ID="Login_btn" CssClass="btn btn-primary" Text="Login" />
-            <asp:Label ID="isUsernameValid" runat="server"></asp:Label>
+            <asp:Button runat="server" ID="Login_btn" OnClick="Login_btn_Click" CssClass="btn btn-primary" Text="Login" />
         </div>
     </div>
 
