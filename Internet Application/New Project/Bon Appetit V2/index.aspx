@@ -27,6 +27,7 @@
         <li><a href="#" class="button big">Learn More</a></li>
         </ul>
     </section>
+    <br />
     <!-- Banner End -->
     <section class="main items">
 	    <article class="item">

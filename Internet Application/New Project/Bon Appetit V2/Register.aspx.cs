@@ -51,12 +51,14 @@ public partial class Register : System.Web.UI.Page
             //create new user data and store it in database 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "INSERT Users (Username, Password, SecurityAns) VALUES (@username, @password, @security)";
+            cmd.CommandText = "INSERT Users (Username, Password, SecurityQesAns, Role) VALUES (@username, @password, @security, @role)";
+            var role = "cust";
             cmd.Connection = sqlConnection1;
 
             cmd.Parameters.AddWithValue("@username", username_tb.Text);
             cmd.Parameters.AddWithValue("@password", password_tb.Text);
             cmd.Parameters.AddWithValue("@security", password_tb.Text);
+            cmd.Parameters.AddWithValue("@role", role);
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
 
