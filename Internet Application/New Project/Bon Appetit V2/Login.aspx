@@ -13,7 +13,7 @@
     <div id="login_pg" class="panel panel-primary">
         <div class="panel-heading">Login</div>
 
-        <!------------------------------------------    Registeration Form      ------------------------------------->
+        <!------------------------------------------    Login Form      ------------------------------------->
         <div class="panel-body">
             <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
             &nbsp;<asp:TextBox ID="username_tb" runat="server" CssClass="form-control" Width="379px" />
@@ -22,7 +22,7 @@
             <label>Password: <asp:TextBox ID="password_tb" TextMode="Password" runat="server" CssClass="form-control" Width="379px" /></label>
         </div>
 
-        <!------------------------------------------    Registeration Button     ------------------------------------->
+        <!------------------------------------------    Login Button     ------------------------------------->
         <div class="panel-footer">
             <asp:Button runat="server" ID="Login_btn" OnClick="Login_btn_Click" CssClass="btn btn-primary" Text="Login" />
         </div>

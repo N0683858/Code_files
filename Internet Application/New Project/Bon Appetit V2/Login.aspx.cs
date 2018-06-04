@@ -22,11 +22,27 @@ public partial class Login : System.Web.UI.Page
         check_User_Name.Parameters.AddWithValue("@user", username_tb.Text);
         check_User_Name.Parameters.AddWithValue("@password", password_tb.Text);
         int isValidUser = (int)check_User_Name.ExecuteScalar();
-        sqlConnection1.Close();
+        
         if (isValidUser > 0)
         {
             //Username and Password match
             isUsernameValid.Text = "Username and Password match!";
+
+            //Check if user is admin or a customer
+            var role = "admin";
+            SqlCommand checkUserRole = new SqlCommand("SELECT COUNT(*) FROM [Users] WHERE ([Username] = @user AND [Role] = @role)", sqlConnection1);
+            checkUserRole.Parameters.AddWithValue("@user", username_tb.Text);
+            checkUserRole.Parameters.AddWithValue("@role", role);
+            int isAdmin = (int)checkUserRole.ExecuteScalar();
+            if(isAdmin > 0)
+            {
+                Response.Redirect("/Admin/AdminHomePage.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/CustomerHomePage");
+            }
+            sqlConnection1.Close();
             return true;
             
         }
