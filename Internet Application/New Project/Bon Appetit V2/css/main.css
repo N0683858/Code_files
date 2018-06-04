@@ -59,8 +59,17 @@ r #logo {
     font-size: 100%;
 }
 
-/* Page content */
+/*logout button in admin page*/
+#logout_btn {
+    float: right;
+    display: inline-block;
+    margin-top: 0.8em;
+    margin-right: 1em;
+    background-color: snow; 
+}
 
+
+/* Page content */
 
 .content {
   padding: 16px;
@@ -1339,7 +1348,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
 		padding: 4em 0 2em 0;
-        margin-top: 5em;
+        margin-top: 1em;
 	}
 
 		#wrapper > .main {

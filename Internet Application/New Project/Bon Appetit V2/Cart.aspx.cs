@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class Cart : System.Web.UI.Page
 {
     private CartItemList cart;
-
+    private Customer customer;
     protected void Page_Load(object sender, EventArgs e)
     {
         //retrieve cart object from session on every post back
@@ -62,6 +62,25 @@ public partial class Cart : System.Web.UI.Page
     }
     protected void btnCheckOut_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/CheckOut.aspx");
+        if (Page.IsValid)
+        {
+
+            //string firstName = (string)Session["FirstName"];
+            //string lastName = (string)Session["LastName"];
+            customer = (Customer)Session["Customer"];
+            if ((customer != null))
+            {
+                Response.Redirect("~/CheckOut2.aspx");
+            }
+            else
+            {
+                
+                Response.Redirect("CheckOut.aspx");
+            }
+
+
+
+        }
+        //Response.Redirect("~/CheckOut.aspx");
     }
 }

@@ -10,7 +10,14 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //get entry data from session state
+        if (!IsPostBack)
+        {
+            string userame = (string)Session["Userame"];
+            string password = (string)Session["Password"];
+            string userRole = (string)Session["UserRole"];
+        }
+        
     }
 
     Boolean login()
@@ -27,6 +34,10 @@ public partial class Login : System.Web.UI.Page
         {
             //Username and Password match
             isUsernameValid.Text = "Username and Password match!";
+            
+
+            //load data in session state object
+            this.LoadCustomerData();
 
             //Check if user is admin or a customer
             var role = "admin";
@@ -36,11 +47,16 @@ public partial class Login : System.Web.UI.Page
             int isAdmin = (int)checkUserRole.ExecuteScalar();
             if(isAdmin > 0)
             {
-                Response.Redirect("/Admin/AdminHomePage.aspx");
+                Session["UserRole"] = role;
+
+                msg_lbl.Text = "Admin Login Successfull!";
+                Response.Redirect(this.ResolveClientUrl("~/Admin/AdminHomePage.aspx"));
             }
             else
             {
-                Response.Redirect("~/CustomerHomePage");
+                Session["UserRole"] = "user";
+                msg_lbl.Text = "User Login Successfull!";
+                Response.Redirect(this.ResolveClientUrl("~/Customers/CustomerHomePage"));
             }
             sqlConnection1.Close();
             return true;
@@ -75,5 +91,12 @@ public partial class Login : System.Web.UI.Page
             }
         }
 
+    }
+
+    private void LoadCustomerData()
+    {
+        //load data in session state object
+        Session["Username"] = username_tb.Text;
+        Session["Password"] = password_tb.Text;
     }
 }

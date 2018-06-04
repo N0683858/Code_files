@@ -11,15 +11,15 @@
     <asp:Label runat="server" ID="msg_lbl" />
     <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
     <div id="login_pg" class="panel panel-primary">
-        <div class="panel-heading">Login</div>
+        <h2>Login</h2>
 
         <!------------------------------------------    Login Form      ------------------------------------->
         <div class="panel-body">
-            <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
-            &nbsp;<asp:TextBox ID="username_tb" runat="server" CssClass="form-control" Width="379px" />
+            <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
+            &nbsp;<asp:TextBox ID="username_tb" PlaceHolder="Username" runat="server" CssClass="form-control" Width="379px" />
             </label>
             <br />
-            <label>Password: <asp:TextBox ID="password_tb" TextMode="Password" runat="server" CssClass="form-control" Width="379px" /></label>
+            <label>Password: <asp:TextBox ID="password_tb" PlaceHolder="Password" TextMode="Password" runat="server" CssClass="form-control" Width="379px" /></label>
         </div>
 
         <!------------------------------------------    Login Button     ------------------------------------->

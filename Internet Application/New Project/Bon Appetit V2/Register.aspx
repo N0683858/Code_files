@@ -13,18 +13,18 @@
     <asp:Label runat="server" ID="msg_lbl" />
     <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
     <div id="registeration_pg" class="panel panel-primary">
-        <div class="panel-heading">User Registeration</div>
+        <h2>User Registeration</h2>
 
         <!------------------------------------------    Registeration Form      ------------------------------------->
         <div class="panel-body">
-            <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
+            <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
             &nbsp;<asp:TextBox ID="username_tb" runat="server" CssClass="form-control" Width="424px" />
             </label>
             <br />
             <label>Password: <asp:TextBox ID="password_tb" TextMode="Password" runat="server" CssClass="form-control" Width="424px" /></label>
             <br />
             <label>Re-Type Password: <asp:TextBox ID="reTypePass_tb" TextMode="Password" runat="server" CssClass="form-control" Width="424px" />
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password_tb" ControlToValidate="reTypePass_tb" ErrorMessage="Password does not match!"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" Display="Dynamic" runat="server" ControlToCompare="password_tb" ControlToValidate="reTypePass_tb" ErrorMessage="Password does not match!"></asp:CompareValidator>
             </label>
             <br />
             <asp:Label runat="server">Security Question: What is your is your birth city?</asp:Label>

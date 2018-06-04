@@ -14,7 +14,7 @@
 	</asp:ContentPlaceHolder>
 </head>
 <body>
-	<!-- Header and the title of Website -->
+	<!-- Picture or image slider above the navBar -->
 	<asp:ContentPlaceHolder ID="headerPlaceHolder" runat="server">
 
 	</asp:ContentPlaceHolder>
@@ -30,8 +30,8 @@
 		<asp:HyperLink NavigateUrl="~/Order.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
 		<asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>
         <asp:HyperLink NavigateUrl="~/Cart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
-        <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Register</asp:HyperLink>
-        <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Login</asp:HyperLink>    
+        <asp:HyperLink NavigateUrl="~/Register.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Register</asp:HyperLink>
+        <asp:HyperLink NavigateUrl="~/Login.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Login</asp:HyperLink>    
 		
         
         </asp:ContentPlaceHolder>	 
@@ -59,8 +59,7 @@
 				</ul>
 				<p class="copyright">Copyright &copy;. Bon Appétit. Since 1997. </p>
 			<asp:ContentPlaceHolder id="footerPlaceHolder" runat="server">
-				<%--the default content for the footer that can be overridden--%>     
-			   <!-- <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label> --> 
+				 
 				
 			</asp:ContentPlaceHolder> 
 		</footer>  

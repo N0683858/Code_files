@@ -13,4 +13,6 @@
         <br /><br />
         <asp:Button ID="btnContinue" runat="server"
             PostBackUrl="~/Order.aspx" Text="Continue Shopping" />
+        <asp:Button ID="edit_btn" runat="server"
+            PostBackUrl="~/CheckOut.aspx" Text="Edit" />
 </asp:Content>

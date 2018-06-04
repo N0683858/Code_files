@@ -16,6 +16,9 @@
         
         //map static pages
         routes.MapPageRoute("Home", "Home", "~/index.aspx");
+
+
+        routes.MapPageRoute("Admin", "Home", "~/Admin/AdminHomePage.aspx");
         
       //  routes.MapPageRoute("Shopping", "Shopping", "~/Shopping.aspx");
         routes.MapPageRoute("Cart", "Shopping/Cart", "~/Cart.aspx");
