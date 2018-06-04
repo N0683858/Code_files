@@ -8,7 +8,7 @@
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <h1>CheckOut</h1>
     
-        <h2>Contact information</h2>
+        <h2>Billing Address And Contact Info</h2>
         <label>Email address: </label>
         <asp:TextBox ID="txtEmail1" runat="server" CssClass="entry" TextMode="Email"></asp:TextBox> 
             <asp:RequiredFieldValidator ID="rfvEmail1" runat="server" 

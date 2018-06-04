@@ -36,7 +36,7 @@
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="#" class="button">More</a></li>
+			    <li><a href="../Admin/AdminOrder.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
@@ -46,7 +46,7 @@
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="#" class="button">More</a></li>
+			    <li><a href="../Admin/AdminOrder.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
@@ -56,7 +56,7 @@
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="#" class="button">More</a></li>
+			    <li><a href="../Admin/AdminOrder.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
@@ -66,7 +66,7 @@
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="#" class="button">More</a></li>
+			    <li><a href="../Admin/AdminOrder.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
     </section>

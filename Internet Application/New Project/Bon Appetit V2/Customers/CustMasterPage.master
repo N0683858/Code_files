@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustMasterPage.master.cs" Inherits="Customers_MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustMasterPage.master.cs" Inherits="Customers_MasterPage" ClientIDMode="Static"%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,8 +30,8 @@
 		    <asp:HyperLink NavigateUrl="~/Customers/CustOrder.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
 		    <asp:HyperLink NavigateUrl="~/Customers/CustReport.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>
             
-            <asp:HyperLink NavigateUrl="~/Cart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
-            <asp:HyperLink NavigateUrl="~/UserProfile.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-user"></i></asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/Customers/CustCart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/Customers/UserProfile.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-user"></i></asp:HyperLink>
 
      	     <asp:Button ID="logout_btn" runat="server" Text="Logout" OnClick="logout_btn_Click" />
 	    </div>      

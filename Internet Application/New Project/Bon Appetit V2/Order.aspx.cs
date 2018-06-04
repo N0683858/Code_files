@@ -47,21 +47,32 @@ public partial class Order : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
-            //get cart from session and selected item from cart
-            CartItemList cart = CartItemList.GetCart();
-            CartItem cartItem = cart[selectedProduct.ProductID];
+            string username = (string)Session["Username"];
 
-            //if item isn’t in cart, add it; otherwise, increase its quantity
-            if (cartItem == null)
+            if (username == null)
             {
-                cart.AddItem(selectedProduct,
-                             Convert.ToInt32(txtQuantity.Text));
+                Response.Redirect("~/Login.aspx");
             }
             else
             {
-                cartItem.AddQuantity(Convert.ToInt32(txtQuantity.Text));
+
+              //get cart from session and selected item from cart
+                CartItemList cart = CartItemList.GetCart();
+                CartItem cartItem = cart[selectedProduct.ProductID];
+
+                //if item isn’t in cart, add it; otherwise, increase its quantity
+                if (cartItem == null)
+                {
+                    cart.AddItem(selectedProduct,
+                                 Convert.ToInt32(txtQuantity.Text));
+                }
+                else
+                {
+                    cartItem.AddQuantity(Convert.ToInt32(txtQuantity.Text));
+                }
+
+                //Response.Redirect("Cart.aspx");
             }
-            Response.Redirect("Cart.aspx");
         }
     }
 }
