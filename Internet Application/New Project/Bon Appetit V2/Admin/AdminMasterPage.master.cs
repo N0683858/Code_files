@@ -10,9 +10,14 @@ public partial class Admin_AdminMasterPage : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         string username = (string)Session["Username"];
-        if (username != null)
+        string role = (string)Session["UserRole"];
+        if ((username != null) && (role == "admin"))
         {
             lblwelcome_msg.Text = "Welcome back, " + (string)Session["Username"] + "!";
+        }
+        else
+        {
+            Response.Redirect("~/RestrictedPage.aspx");
         }
     }
 

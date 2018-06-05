@@ -4,9 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="navBar" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+    <h1>404 error!</h1>
+    <h3>You're trying to enter a restricted page!</h3>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="footerPlaceHolder" Runat="Server">
 </asp:Content>

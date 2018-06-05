@@ -90,9 +90,8 @@ r #logo {
 
 /***************************   Registration Page  ******************************/
 
-#registeration_pg {
+#registeration_pg, #login_pg {
     margin-left: 26em;
-
 }
 
 /****************************** Edit User Details ******************************************/

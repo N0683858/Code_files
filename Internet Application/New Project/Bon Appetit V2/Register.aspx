@@ -4,8 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="navBar" Runat="Server">
-</asp:Content>
+
 
 
 <asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
@@ -18,17 +17,17 @@
         <!------------------------------------------    Registeration Form      ------------------------------------->
         <div class="panel-body">
             <label>Username:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" runat="server" ControlToValidate="username_tb" ErrorMessage="Please type a username!"></asp:RequiredFieldValidator>
-            &nbsp;<asp:TextBox ID="username_tb" runat="server" CssClass="form-control" Width="424px" />
+            &nbsp;<asp:TextBox ID="username_tb" PlaceHolder="Username" runat="server" CssClass="form-control" Width="424px" />
             </label>
             <br />
-            <label>Password: <asp:TextBox ID="password_tb" TextMode="Password" runat="server" CssClass="form-control" Width="424px" /></label>
+            <label>Password: <asp:TextBox ID="password_tb" PlaceHolder="Password" TextMode="Password" runat="server" CssClass="form-control" Width="424px" /></label>
             <br />
-            <label>Re-Type Password: <asp:TextBox ID="reTypePass_tb" TextMode="Password" runat="server" CssClass="form-control" Width="424px" />
+            <label>Re-Type Password: <asp:TextBox ID="reTypePass_tb" PlaceHolder="Re-Type Password" TextMode="Password" runat="server" CssClass="form-control" Width="424px" />
             <asp:CompareValidator ID="CompareValidator1" Display="Dynamic" runat="server" ControlToCompare="password_tb" ControlToValidate="reTypePass_tb" ErrorMessage="Password does not match!"></asp:CompareValidator>
             </label>
             <br />
             <asp:Label runat="server">Security Question: What is your is your birth city?</asp:Label>
-            <label>Answer: <asp:TextBox ID="security_tb" runat="server" CssClass="form-control" Width="424px" /></label>
+            <label>Answer: <asp:TextBox ID="security_tb" PlaceHolder="Answer" runat="server" CssClass="form-control" Width="424px" /></label>
         </div>
 
         <!------------------------------------------    Registeration Button     ------------------------------------->

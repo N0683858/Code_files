@@ -79,4 +79,10 @@ public partial class Customers_CustomerCart : System.Web.UI.Page
         }
         //Response.Redirect("~/CheckOut.aspx");
     }
+
+    protected void logout_btn_Click(object sender, EventArgs e)
+    {
+        Session.RemoveAll();
+        Response.Redirect("~/Login.aspx");
+    }
 }

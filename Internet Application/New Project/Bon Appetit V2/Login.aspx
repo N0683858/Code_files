@@ -4,8 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="navBar" Runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
 
     <asp:Label runat="server" ID="msg_lbl" />
@@ -26,6 +25,7 @@
         <div class="panel-footer">
             <asp:Button runat="server" ID="Login_btn" OnClick="Login_btn_Click" CssClass="btn btn-primary" Text="Login" />
             <asp:Button runat="server" ID="cancel_btn" CausesValidation="false" OnClick="cancel_btn_Click" CssClass="btn btn-primary" Text="Cancel" />
+            <asp:Button runat="server" ID="forgotPass_btn" CausesValidation="false" OnClick="forgotPass_btn_Click" CssClass="btn btn-primary" Text="Forgot Password" />
         </div>
     </div>
 

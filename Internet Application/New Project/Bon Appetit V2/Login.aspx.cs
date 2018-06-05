@@ -102,6 +102,11 @@ public partial class Login : System.Web.UI.Page
         Response.Redirect("~/index.aspx");
     }
 
+    protected void forgotPass_btn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/ForgotPassword.aspx");
+    }
+
     private void LoadCustomerData()
     {
         //load data in session state object

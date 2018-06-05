@@ -38,4 +38,10 @@ public partial class Customers_CustomerInvoice : System.Web.UI.Page
 
         txtData.Text = message;
     }
+
+    protected void logout_btn_Click(object sender, EventArgs e)
+    {
+        Session.RemoveAll();
+        Response.Redirect("~/Login.aspx");
+    }
 }

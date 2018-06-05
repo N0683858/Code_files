@@ -21,7 +21,7 @@
 	
 	<!-- Navigation Bar -->
 	<div id = "navbar">
-        <asp:ContentPlaceHolder id="navBar" runat="server">
+        
 
 		
 		<div id="logo"><img src="Images/logo.png" id="text-logo"/></div>
@@ -34,7 +34,7 @@
         <asp:HyperLink NavigateUrl="~/Login.aspx" CssClass="LogReg" runat="server" BorderStyle="None">Login</asp:HyperLink>    
 		
         
-        </asp:ContentPlaceHolder>	 
+        	 
 	</div>      
 	<!-- Navigation Bar End -->
 
