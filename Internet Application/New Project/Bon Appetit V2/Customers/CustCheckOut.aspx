@@ -100,8 +100,8 @@
             OnClick="btnCheckOut_Click"  />
         <asp:Button ID="btnCancel" runat="server" Text="Cancel Order" 
             CausesValidation="False" OnClick="btnCancel_Click" CssClass="button" />
-        <asp:LinkButton ID="lbtnContinueShopping" runat="server"
-            PostBackUrl="~/Customers/CustOrder.aspx" CausesValidation="False">Continue Shopping</asp:LinkButton>
+        <asp:Button ID="lbtnContinueShopping" Text="Continue Shopping" runat="server"
+            PostBackUrl="~/Customers/CustOrder.aspx" CausesValidation="False" Width="262px" />
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="footerPlaceHolder" Runat="Server">
 </asp:Content>

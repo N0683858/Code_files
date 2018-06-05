@@ -68,12 +68,12 @@ public partial class Customers_CustomerCart : System.Web.UI.Page
             customer = (Customer)Session["Customer"];
             if ((customer != null))
             {
-                Response.Redirect("~/Customers/CustCheckOut.aspx");
+                Response.Redirect("~/Customers/CustInvoice.aspx");
             }
             else
             {
 
-                Response.Redirect("~/Customers/CustInvoice.aspx");
+                Response.Redirect("~/Customers/CustCheckOut.aspx");
             }
 
         }

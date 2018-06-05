@@ -10,7 +10,7 @@ public partial class ForgotPassword : System.Web.UI.Page
 
     }
 
-    Boolean login()
+    Boolean newPass()
     {
         SqlConnection sqlConnection1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
 
@@ -58,7 +58,7 @@ public partial class ForgotPassword : System.Web.UI.Page
 
         if (Page.IsValid)
         {
-            if (login())
+            if (newPass())
             {
                 msg_lbl.Text = "Data match!";
 
