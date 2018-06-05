@@ -1,3 +1,8 @@
+/*
+	Epilogue by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
 
@@ -105,7 +110,7 @@ View {
     display: block;
 }
 
-/****************************** Edit User Details ******************************************/
+/****************************** logged in state ******************************************/
 /* welcome label */
 #lblwelcome_msg {
     float: right;
@@ -114,7 +119,21 @@ View {
     margin-right: 1em;
 }
 
+/*  User Profile    */
+#side-navBar{
+    /*border-style: ridge;
+    border-color: black;
+    border-width: 1px;*/
+    width: 20%;
+    float: left;
+}
 
+.sideLinks {
+    border-bottom-style: solid;
+    border-color: black;
+    border-width: 1px;
+    
+}
 
 
 /* Reset */

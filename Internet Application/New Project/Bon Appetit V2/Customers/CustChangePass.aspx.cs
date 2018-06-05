@@ -37,6 +37,7 @@ public partial class Customers_CustChangePass : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
 
+            Session["Password"] = password_tb.Text;//update pass in session object too
             msg_lbl.Text = "Password Changed!";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg_lbl.Text + "');window.location ='" + this.ResolveClientUrl("~/Customers/UserProfile.aspx") + "';", true);
             return true;

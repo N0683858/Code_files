@@ -15,10 +15,10 @@ public partial class Customers_MasterPage : System.Web.UI.MasterPage
         {
             lblwelcome_msg.Text = "Welcome back, " + (string)Session["Username"] + "!";
         }
-        else
-        {
-            Response.Redirect("~/RestrictedPage.aspx");
-        }
+       // else
+      //  {
+      //      Response.Redirect("~/RestrictedPage.aspx");
+     //   }
     }
 
     protected void logout_btn_Click(object sender, EventArgs e)
