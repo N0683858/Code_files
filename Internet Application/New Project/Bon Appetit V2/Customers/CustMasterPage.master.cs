@@ -9,7 +9,11 @@ public partial class Customers_MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        string username = (string)Session["Username"];
+        if (username != null)
+        {
+            lblwelcome_msg.Text = "Welcome back, " + (string)Session["Username"] + "!";
+        }
     }
 
     protected void logout_btn_Click(object sender, EventArgs e)
