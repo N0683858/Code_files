@@ -75,4 +75,20 @@ public partial class Order : System.Web.UI.Page
             }
         }
     }
+
+    protected void btnCart_Click(object sender, EventArgs e)
+    {
+       
+            string username = (string)Session["Username"];
+
+            if (username == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/Cart.aspx");
+            }
+        
+    }
 }

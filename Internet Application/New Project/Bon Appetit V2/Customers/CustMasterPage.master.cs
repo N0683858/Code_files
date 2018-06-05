@@ -14,6 +14,7 @@ public partial class Customers_MasterPage : System.Web.UI.MasterPage
 
     protected void logout_btn_Click(object sender, EventArgs e)
     {
-
+        Session.RemoveAll();
+        Response.Redirect("~/Login.aspx");
     }
 }

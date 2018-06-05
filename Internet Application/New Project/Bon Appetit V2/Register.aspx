@@ -34,6 +34,7 @@
         <!------------------------------------------    Registeration Button     ------------------------------------->
         <div class="panel-footer">
             <asp:Button runat="server" ID="register_btn" OnClick="register_btn_Click" CssClass="btn btn-primary" Text="Register" />
+            <asp:Button runat="server" ID="cancel_btn" CausesValidation="false" OnClick="cancel_btn_Click" CssClass="btn btn-primary" Text="Cancel" />
             
         </div>
 

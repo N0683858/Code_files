@@ -50,13 +50,16 @@ public partial class Login : System.Web.UI.Page
                 Session["UserRole"] = role;
 
                 msg_lbl.Text = "Admin Login Successfull!";
-                Response.Redirect(this.ResolveClientUrl("~/Admin/AdminHomePage.aspx"));
+                ScriptManager.RegisterStartupScript(this, this.GetType(),"alert", "alert('" + msg_lbl.Text + "');window.location ='" + this.ResolveClientUrl("~/Admin/AdminHomePage.aspx") + "';", true);
+                //Response.Redirect(this.ResolveClientUrl("~/Admin/AdminHomePage.aspx"));
             }
             else
             {
                 Session["UserRole"] = "user";
+
                 msg_lbl.Text = "User Login Successfull!";
-                Response.Redirect(this.ResolveClientUrl("~/Customers/CustomerHomePage"));
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg_lbl.Text + "');window.location ='" + this.ResolveClientUrl("~/Customers/CustHomePage.aspx") + "';", true);
+                //Response.Redirect(this.ResolveClientUrl("~/Customers/CustHomePage.aspx"));
             }
             sqlConnection1.Close();
             return true;
@@ -91,6 +94,12 @@ public partial class Login : System.Web.UI.Page
             }
         }
 
+    }
+
+
+    protected void cancel_btn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/index.aspx");
     }
 
     private void LoadCustomerData()
