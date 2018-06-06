@@ -9,8 +9,17 @@
     <!-- when your register it will display a message -->
     <asp:Label runat="server" ID="msg_lbl" />
     <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
+    <h2>Profile</h2>
+    <div id="side-navBar">
+        <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" class="sideLinks" ID="accDetails" runat="server">Account Details</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AdminChangePass.aspx" class="sideLinks" ID="changePass" runat="server">Change Password</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/CreateNewUser.aspx" class="sideLinks" ID="newAcc" runat="server" ForeColor="#FF0066">New Account</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/listInvoices.aspx" class="sideLinks" ID="listInvoices" runat="server">View Invoices</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/EditInvoices.aspx" class="sideLinks" ID="editBillingInfo" runat="server">User Billing Info</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AddNewProducts.aspx" class="sideLinks" ID="HyperLink1" runat="server">Add Products</asp:HyperLink> <br />
+    </div>
     <div id="registeration_pg" class="panel panel-primary">
-        <h2>User Registeration</h2>
+        <h2>New User Account</h2>
 
         <!------------------------------------------    Registeration Form      ------------------------------------->
         <div class="panel-body">

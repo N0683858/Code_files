@@ -20,23 +20,17 @@
 	</asp:ContentPlaceHolder>
 	<!-- Navigation Bar -->
     <form id="form" runat="server">
-	    <div id = "navbar">
-       
-
-		
+	    <div id = "navbar">		
 		    <div id="logo"><img src="../Images/logo.png" id="text-logo"/></div>
 		    <asp:HyperLink NavigateUrl="~/Admin/AdminHomePage.aspx" CssClass="links" runat="server" BorderStyle="None">Home</asp:HyperLink>
 		    <asp:HyperLink NavigateUrl="~/Admin/AdminMenu.aspx" CssClass="links" runat="server" BorderStyle="None">Menu</asp:HyperLink>
-		    <asp:HyperLink NavigateUrl="~/Order.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
-		    <asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>
-            <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" CssClass="links" runat="server" BorderStyle="None">Maintenance</asp:HyperLink>
+		    <asp:HyperLink NavigateUrl="~/Admin/AdminOrder.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
+		    <asp:HyperLink NavigateUrl="~/Admin/AdminReport.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>
             
-            <asp:HyperLink NavigateUrl="~/Cart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
-            <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-user"></i></asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/Admin/AdminCart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-user"></i></asp:HyperLink>           
      	    
-            
-     	    
-            <asp:Button ID="logout_btn" runat="server" Text="Logout" OnClick="logout_btn_Click" Font-Bold="True" />
+            <asp:Button ID="logout_btn" runat="server" Text="Logout" OnClick="logout_btn_Click" Font-Bold="True" CausesValidation="False" />
             <asp:Label ID="lblwelcome_msg" runat="server" Font-Bold="False" ForeColor="White"></asp:Label>
             
 	    </div>      
@@ -44,13 +38,9 @@
 
     <!-- Wrapper -->
 	    <div id="wrapper">
-		    <section>
-				
-                		
+		    <section>              		
 				    <asp:ContentPlaceHolder id="formPlaceHolder" runat="server"> 
-				    </asp:ContentPlaceHolder> 
-				
-			    
+				    </asp:ContentPlaceHolder> 	    
 		    </section>  
         
 

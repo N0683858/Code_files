@@ -47,31 +47,31 @@ public partial class Order : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
-            string username = (string)Session["Username"];
+            //    string username = (string)Session["Username"];
 
-            if (username == null)
-            {
-                Response.Redirect("~/Login.aspx");
-            }
-            else
-            {
+            //  if (username == null)
+            //   {
+            string msg = "You must first login to make an order!";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location ='" + this.ResolveClientUrl("~/Login.aspx") + "';", true);
+         //   }
+         //   else
+         //   {
 
               //get cart from session and selected item from cart
-                CartItemList cart = CartItemList.GetCart();
-                CartItem cartItem = cart[selectedProduct.ProductID];
+         //       CartItemList cart = CartItemList.GetCart();
+         //       CartItem cartItem = cart[selectedProduct.ProductID];
 
                 //if item isn’t in cart, add it; otherwise, increase its quantity
-                if (cartItem == null)
+        //        if (cartItem == null)
                 {
-                    cart.AddItem(selectedProduct,
-                                 Convert.ToInt32(txtQuantity.Text));
-                }
-                else
-                {
-                    cartItem.AddQuantity(Convert.ToInt32(txtQuantity.Text));
-                }
+        //            cart.AddItem(selectedProduct,
+        //                         Convert.ToInt32(txtQuantity.Text));
+        //        }
+        //        else
+        //        {
+        //            cartItem.AddQuantity(Convert.ToInt32(txtQuantity.Text));
+        //        }
 
-                //Response.Redirect("Cart.aspx");
             }
         }
     }

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
-    <asp:ListBox ID="lstCart" runat="server"></asp:ListBox>
+    <asp:ListBox ID="lstCart" runat="server" Height="180px" Width="395px"></asp:ListBox>
     <div id="cartbuttons">               
         <asp:Button ID="btnRemove" runat="server" CssClass="button" Text="Remove Item" OnClick="btnRemove_Click" Width="255px" />
         <br />

@@ -67,21 +67,17 @@ public partial class Admin_AdminCartPage : System.Web.UI.Page
             customer = (Customer)Session["Customer"];
             if ((customer != null))
             {
-                Response.Redirect("~/Customers/CustInvoice.aspx");
+                Response.Redirect(this.ResolveClientUrl("~/Admin/AdminInvoice.aspx"));
             }
             else
             {
 
-                Response.Redirect("~/Customers/CustCheckOut.aspx");
+                Response.Redirect(this.ResolveClientUrl("~/Admin/AdminCheckOut.aspx"));
             }
 
         }
         //Response.Redirect("~/CheckOut.aspx");
     }
 
-    protected void logout_btn_Click(object sender, EventArgs e)
-    {
-        Session.RemoveAll();
-        Response.Redirect("~/Login.aspx");
-    }
+
 }

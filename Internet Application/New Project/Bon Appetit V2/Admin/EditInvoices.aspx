@@ -5,13 +5,23 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+    <h2>Profile</h2>
+    <div id="side-navBar">
+        <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" class="sideLinks" ID="accDetails" runat="server">Account Details</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AdminChangePass.aspx" class="sideLinks" ID="changePass" runat="server">Change Password</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/CreateNewUser.aspx" class="sideLinks" ID="newAcc" runat="server">New Account</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/listInvoices.aspx" class="sideLinks" ID="listInvoices" runat="server">View Invoices</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/EditInvoices.aspx" class="sideLinks" ID="editBillingInfo" runat="server" ForeColor="#FF0066">User Billing Info</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AddNewProducts.aspx" class="sideLinks" ID="HyperLink1" runat="server">Add Products</asp:HyperLink> <br />
+    </div> 
+    <br /><br /><br /><br />
      <div id="gridview">
+         <h2>Billing Infomation</h2>
             <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Email" DataSourceID="SqlDataSource2" Height="114px" Width="479px" OnItemDeleted="DetailsView1_ItemDeleted" OnItemInserted="DetailsView1_ItemInserted" OnItemUpdated="DetailsView1_ItemUpdated">
                 <Fields>
                     <asp:TemplateField HeaderText="Email" SortExpression="Email">
                         <EditItemTemplate>
-                            <asp:Label ID="Email_Lbl" runat="server" Text='<%# Eval("Email") %>'></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="Email_Lbl" ErrorMessage="Email Required!"></asp:RequiredFieldValidator>
+                            <asp:Label ID="Email_Lbl" runat="server" Text='<%# Eval("Email") %>'></asp:Label>                           
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:TextBox ID="Email_tb" runat="server" Text='<%# Bind("Email") %>'></asp:TextBox>

@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <h1>Invoice</h1> 
     
-        <asp:TextBox ID="txtData" runat="server" TextMode="MultiLine" Columns="50" Rows="20"></asp:TextBox>  
+        <asp:TextBox ID="txtData" runat="server" TextMode="MultiLine" Columns="50" Rows="20" Width="648px"></asp:TextBox>  
         <br /><br />
         <asp:Button ID="btnContinue" runat="server"
             PostBackUrl="~/Customers/CustOrder.aspx" Text="Continue Shopping" />

@@ -7,6 +7,12 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
      <asp:Label runat="server" ID="msg_lbl" />
     <asp:Label ID="isUsernameValid" runat="server"></asp:Label> 
+    <h2>Profile</h2>
+    <div id="side-navBar">
+        <asp:HyperLink NavigateUrl="~/Customers/UserProfile.aspx" class="sideLinks" ID="accDetails" runat="server">Account Details</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Customers/CustChangePass.aspx" class="sideLinks" ID="changePass" runat="server" ForeColor="#FF0066">Change Password</asp:HyperLink> <br />
+        <asp:HyperLink class="sideLinks" ID="HyperLink1" Visable="false" runat="server"></asp:HyperLink> <br />
+    </div>
     <div id="login_pg" class="panel panel-primary">
         <h2>Change Password</h2>
 

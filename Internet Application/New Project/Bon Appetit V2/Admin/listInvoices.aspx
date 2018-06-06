@@ -22,6 +22,15 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
+    <h2>Profile</h2>
+    <div id="side-navBar">
+        <asp:HyperLink NavigateUrl="~/Admin/MaintenancePage.aspx" class="sideLinks" ID="accDetails" runat="server">Account Details</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AdminChangePass.aspx" class="sideLinks" ID="changePass" runat="server">Change Password</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/CreateNewUser.aspx" class="sideLinks" ID="newAcc" runat="server">New Account</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/listInvoices.aspx" class="sideLinks" ID="listInvoices" runat="server" ForeColor="#FF0066">View Invoices</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/EditInvoices.aspx" class="sideLinks" ID="editBillingInfo" runat="server">User Billing Info</asp:HyperLink> <br />
+        <asp:HyperLink NavigateUrl="~/Admin/AddNewProducts.aspx" class="sideLinks" ID="HyperLink1" runat="server">Add Products</asp:HyperLink> <br />
+    </div>
      <asp:Label ID="Label1" runat="server" Text="Choose an invoice:"></asp:Label>
       &nbsp;
           <asp:DropDownList ID="ddlInvoice" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="InvoiceNumber" DataValueField="InvoiceNumber"></asp:DropDownList>

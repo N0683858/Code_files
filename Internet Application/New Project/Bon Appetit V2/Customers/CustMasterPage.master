@@ -33,7 +33,7 @@
             <asp:HyperLink NavigateUrl="~/Customers/CustCart.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-shopping-cart"></i></asp:HyperLink>
             <asp:HyperLink NavigateUrl="~/Customers/UserProfile.aspx" CssClass="LogReg" runat="server" BorderStyle="None"><i class="fas fa-user"></i></asp:HyperLink>
 
-     	     <asp:Button ID="logout_btn" runat="server" Text="Logout" OnClick="logout_btn_Click" />
+     	     <asp:Button ID="logout_btn" runat="server" Text="Logout" OnClick="logout_btn_Click" CausesValidation="False" />
             <asp:Label ID="lblwelcome_msg" runat="server" Font-Bold="False" ForeColor="White"></asp:Label>
 	    </div>      
 	    <!-- Navigation Bar End -->

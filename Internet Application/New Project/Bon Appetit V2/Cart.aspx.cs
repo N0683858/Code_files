@@ -64,19 +64,21 @@ public partial class Cart : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
+            string msg = "You must first login to make an order!";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location ='" + this.ResolveClientUrl("~/Login.aspx") + "';", true);
 
             //string firstName = (string)Session["FirstName"];
             //string lastName = (string)Session["LastName"];
-            customer = (Customer)Session["Customer"];
-            if ((customer != null))
-            {
-                Response.Redirect("~/CheckOut2.aspx");
-            }
-            else
-            {
-                
-                Response.Redirect("CheckOut.aspx");
-            }
+            // customer = (Customer)Session["Customer"];
+            //  if ((customer != null))
+            //  {
+            //      Response.Redirect("~/CheckOut2.aspx");
+            //  }
+            //  else
+            //  {
+
+            //       Response.Redirect("CheckOut.aspx");
+            //  }
 
 
 

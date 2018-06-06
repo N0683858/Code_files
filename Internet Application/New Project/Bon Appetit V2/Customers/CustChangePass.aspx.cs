@@ -78,12 +78,7 @@ public partial class Customers_CustChangePass : System.Web.UI.Page
 
     protected void cancel_btn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/index.aspx");
+        Response.Redirect(this.ResolveClientUrl("~/Customers/UserProfile.aspx"));
     }
 
-    protected void logout_btn_Click(object sender, EventArgs e)
-    {
-        Session.RemoveAll();
-        Response.Redirect("~/Login.aspx");
-    }
 }

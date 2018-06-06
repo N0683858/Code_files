@@ -12,9 +12,4 @@ public partial class Customers_CustomerHomePage : System.Web.UI.Page
 
     }
 
-    protected void logout_btn_Click(object sender, EventArgs e)
-    {
-        Session.RemoveAll();
-        Response.Redirect("~/Login.aspx");
-    }
 }
