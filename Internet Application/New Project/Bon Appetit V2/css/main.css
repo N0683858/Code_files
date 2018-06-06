@@ -129,10 +129,13 @@ View {
 }
 
 .sideLinks {
-    border-bottom-style: solid;
-    border-color: black;
-    border-width: 1px;
+    font-weight: bold;
+    text-decoration: none;
     
+}
+
+.profile_lbls{
+    font-weight: bold;
 }
 
 
