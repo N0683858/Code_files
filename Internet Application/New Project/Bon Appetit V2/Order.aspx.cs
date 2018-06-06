@@ -83,8 +83,9 @@ public partial class Order : System.Web.UI.Page
 
             if (username == null)
             {
-                Response.Redirect("~/Login.aspx");
-            }
+            string msg = "You must first login to make an order!";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location ='" + this.ResolveClientUrl("~/Login.aspx") + "';", true);
+        }
             else
             {
                 Response.Redirect("~/Cart.aspx");

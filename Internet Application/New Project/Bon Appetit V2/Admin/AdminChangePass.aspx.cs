@@ -39,7 +39,7 @@ public partial class Admin_AdminChangePass : System.Web.UI.Page
 
             Session["Password"] = password_tb.Text;//update pass in session object too
             msg_lbl.Text = "Password Changed!";
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg_lbl.Text + "');window.location ='" + this.ResolveClientUrl("~/Customers/UserProfile.aspx") + "';", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg_lbl.Text + "');window.location ='" + this.ResolveClientUrl("~/Admin/MaintenancePage.aspx") + "';", true);
             return true;
 
 
@@ -47,7 +47,7 @@ public partial class Admin_AdminChangePass : System.Web.UI.Page
         else
         {
             //Username or password doesn't exist.
-            isUsernameValid.Text = "Username or Answer Incorrect!";
+            isUsernameValid.Text = "Security Answer Incorrect!";
             return false;
 
 

@@ -11,7 +11,7 @@
         <asp:TextBox ID="txtData" runat="server" TextMode="MultiLine" Columns="50" Rows="20" Width="564px"></asp:TextBox>  
         <br /><br />
         <asp:Button ID="btnContinue" runat="server"
-            PostBackUrl="~/Admin/AdminOrder.aspx" Text="Continue Shopping" />
+            OnClick="btnContinue_Click" Text="Order" />
         <asp:Button ID="edit_btn" runat="server"
             PostBackUrl="~/Admin/AdminCheckOut.aspx" Text="Edit" />
 

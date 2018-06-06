@@ -35,16 +35,23 @@
                 <asp:TextBox ID="longDes_tb" PlaceHolder="Long Description" TextMode="MultiLine" Rows="5" runat="server" CssClass="form-control" Width="424px" />            
             </label>
             <br /> <!-- change cat id text box to drop down -->
-            <label>Catagory ID:<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Catagory ID Required!" Display="Dynamic" ControlToValidate="catID_tb"></asp:RequiredFieldValidator> 
-                <asp:TextBox ID="catID_tb" PlaceHolder="Catagory ID" runat="server" CssClass="form-control" Width="424px" />            
+            <label>Catagory ID:<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Catagory ID Required!" Display="Dynamic" ControlToValidate="catID_ddl"></asp:RequiredFieldValidator> 
+               <asp:DropDownList ID="catID_ddl" runat="server">
+                   <asp:ListItem Value="burg">Burgers</asp:ListItem>
+                   <asp:ListItem Value="desserts">Desserts</asp:ListItem>
+                   <asp:ListItem Value="drink">Drinks</asp:ListItem>
+                   <asp:ListItem>Vegetarian</asp:ListItem>
+               </asp:DropDownList>
+                <!-- <asp:TextBox ID="catID_tb" PlaceHolder="Catagory ID" runat="server" CssClass="form-control" Width="424px" /> -->           
             </label>
             <br />
             <label>Unit Price:<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Unit Price Is Required!" Display="Dynamic" ControlToValidate="unitPrice_tb"></asp:RequiredFieldValidator>
-                <asp:TextBox ID="unitPrice_tb" PlaceHolder="Unit Price" runat="server" CssClass="form-control" Width="424px" />            
+                
+                 <asp:TextBox ID="unitPrice_tb" PlaceHolder="Unit Price" runat="server" CssClass="form-control" Width="424px" />            
             </label>
             <br />
-            <label>On Hand:<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="On Hand Price Required!" Display="Dynamic" ControlToValidate="onHand_tb"></asp:RequiredFieldValidator>
-                <asp:TextBox ID="onHand_tb" PlaceHolder="On Hand Price" runat="server" CssClass="form-control" Width="424px" />            
+            <label>In Stock:<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="On Hand Price Required!" Display="Dynamic" ControlToValidate="onHand_tb"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="onHand_tb" PlaceHolder="In Stock" runat="server" CssClass="form-control" Width="424px" />            
             </label>
             <br />
             <label>Image: 

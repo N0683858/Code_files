@@ -25,7 +25,7 @@
 
 		
 		<div id="logo"><img src="Images/logo.png" id="text-logo"/></div>
-		<asp:HyperLink NavigateUrl="~/index.aspx" CssClass="links" runat="server" BorderStyle="None">Home</asp:HyperLink>
+		<asp:HyperLink NavigateUrl="~/home.aspx" CssClass="links" runat="server" BorderStyle="None">Home</asp:HyperLink>
 		<asp:HyperLink NavigateUrl="~/Menu.aspx" CssClass="links" runat="server" BorderStyle="None">Menu</asp:HyperLink>
 		<asp:HyperLink NavigateUrl="~/Order.aspx" CssClass="links" runat="server" BorderStyle="None">Order</asp:HyperLink>
 		<asp:HyperLink NavigateUrl="~/Report.aspx" CssClass="links" runat="server" BorderStyle="None">Report</asp:HyperLink>

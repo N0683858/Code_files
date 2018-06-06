@@ -45,8 +45,8 @@
         <br />
         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" Width="400px">
             <AlternatingItemStyle BackColor="White" />
-            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
             <HeaderTemplate>
                 <table class="auto-style1">
                     <tr>

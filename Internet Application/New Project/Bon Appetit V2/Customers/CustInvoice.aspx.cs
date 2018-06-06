@@ -39,4 +39,12 @@ public partial class Customers_CustomerInvoice : System.Web.UI.Page
         txtData.Text = message;
     }
 
+    protected void btnContinue_Click(object sender, EventArgs e)
+    {
+        string msg = "Your order had been made!";
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location ='" + this.ResolveClientUrl("~/Customers/CustOrder.aspx") + "';", true);
+        Session.Remove("Cart");
+        Session.Remove("Customer");
+    }
+
 }

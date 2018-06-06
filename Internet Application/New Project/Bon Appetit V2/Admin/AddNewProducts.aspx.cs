@@ -30,7 +30,7 @@ public partial class Admin_AddNewProducts : System.Web.UI.Page
         cmd.Parameters.AddWithValue("@name", name_tb.Text);
         cmd.Parameters.AddWithValue("@shortDes", shortDes_tb.Text);
         cmd.Parameters.AddWithValue("@longDes", longDes_tb.Text);
-        cmd.Parameters.AddWithValue("@catID", catID_tb.Text);
+        cmd.Parameters.AddWithValue("@catID", catID_ddl.Text);
         cmd.Parameters.AddWithValue("@imgFile", imgFile.FileName);
         cmd.Parameters.AddWithValue("@unitPrice", unitPrice_tb.Text);
         cmd.Parameters.AddWithValue("@onHand", Convert.ToInt32(onHandPrice));

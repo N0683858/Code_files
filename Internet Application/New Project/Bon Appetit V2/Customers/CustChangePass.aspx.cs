@@ -47,7 +47,7 @@ public partial class Customers_CustChangePass : System.Web.UI.Page
         else
         {
             //Username or password doesn't exist.
-            isUsernameValid.Text = "Username or Answer Incorrect!";
+            isUsernameValid.Text = "Security Answer Incorrect!";
             return false;
 
 

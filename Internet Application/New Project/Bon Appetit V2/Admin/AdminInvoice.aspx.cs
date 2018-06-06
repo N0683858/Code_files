@@ -38,4 +38,12 @@ public partial class Admin_AdminInvoice : System.Web.UI.Page
 
         txtData.Text = message;
     }
+
+    protected void btnContinue_Click(object sender, EventArgs e)
+    {
+        string msg = "Your order had been made!";
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location ='" + this.ResolveClientUrl("~/Admin/AdminOrder.aspx") + "';", true);
+        Session.Remove("Cart");
+        Session.Remove("Customer");
+    }
 }

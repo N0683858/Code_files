@@ -10,7 +10,7 @@
         <asp:TextBox ID="txtData" runat="server" TextMode="MultiLine" Columns="50" Rows="20" Width="648px"></asp:TextBox>  
         <br /><br />
         <asp:Button ID="btnContinue" runat="server"
-            PostBackUrl="~/Customers/CustOrder.aspx" Text="Continue Shopping" />
+            OnClick="btnContinue_Click" Text="Order" />
         <asp:Button ID="edit_btn" runat="server"
             PostBackUrl="~/Customers/CustCheckOut.aspx" Text="Edit" />
 </asp:Content>

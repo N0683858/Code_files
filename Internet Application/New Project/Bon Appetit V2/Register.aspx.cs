@@ -72,7 +72,7 @@ public partial class Register : System.Web.UI.Page
 
     protected void cancel_btn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/index.aspx");
+        Response.Redirect("~/home.aspx");
     }
 
     private void LoadCustomerData()

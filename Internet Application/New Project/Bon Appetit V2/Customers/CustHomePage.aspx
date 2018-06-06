@@ -29,42 +29,42 @@
     <section class="main items">
 	    <article class="item">
 		    <header>
-			    <a href="#"><img src="../images/burg.jpg" width="100%"; alt="" /></a>
+			    <a href="../Customers/CustMenu.aspx"><img src="../images/burg.jpg" width="100%"; alt="" /></a>
 				<h3>Hawaiian Burgers</h3>
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="../Customers/CustOrder.aspx" class="button">More</a></li>
+			    <li><a href="../Customers/CustMenu.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
 		    <header>
-			    <a href="#"><img src="../images/pic02.jpg" alt="" /></a>
-			    <h3>Blandit adipiscing</h3>
+			    <a href="../Customers/CustMenu.aspx"><img src="../images//pink.jpeg" width="100%" alt="" /></a>
+			    <h3>Ice Cold Drinks</h3>
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="../Customers/CustOrder.aspx" class="button">More</a></li>
+			    <li><a href="../Customers/CustMenu.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
 		    <header>
-			    <a href="#"><img src="../images/pic03.jpg" alt="" /></a>
-			    <h3>Lorem massa nulla</h3>
+			    <a href="../Customers/CustMenu.aspx"><img src="../images/cherryD.jpeg" width="100%" alt="" /></a>
+			    <h3>Delicious Desserts</h3>
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="../Customers/CustOrder.aspx" class="button">More</a></li>
+			    <li><a href="../Customers/CustMenu.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
 	    <article class="item">
 		    <header>
-			    <a href="#"><img src="../images/pic04.jpg" alt="" /></a>
-			    <h3>Ipsum sed tempus</h3>
+			    <a href="../Customers/CustMenu.aspx"><img src="../images/veg4.jpeg" width="100%" alt="" /></a>
+			    <h3>Vegeterian</h3>
 		    </header>
 		    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 		    <ul class="actions">
-			    <li><a href="../Customers/CustOrder.aspx" class="button">More</a></li>
+			    <li><a href="../Customers/CustMenu.aspx" class="button">More</a></li>
 		    </ul>
 	    </article>
     </section>

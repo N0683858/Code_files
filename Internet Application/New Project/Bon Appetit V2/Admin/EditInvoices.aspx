@@ -195,12 +195,12 @@
                     </asp:BoundField>
                     <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                 </Columns>
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
                 <RowStyle BackColor="White" ForeColor="Black" />
                 <AlternatingRowStyle BackColor="#E3EAEB" ForeColor="Black" />
-                <SelectedRowStyle BackColor="#F46D11" ForeColor="White" />
-                <PagerSettings Mode="NextPreviousFirstLast" />
-                <PagerStyle BackColor="#1C5E55" ForeColor="White"
+                <SelectedRowStyle BackColor="#FF33CC" ForeColor="White" />
+                <PagerSettings Mode="NextPreviousFirstLast" FirstPageText="First" LastPageText="Last" NextPageText="Next" PreviousPageText="Prev" />
+                <PagerStyle BackColor="#FF0066" ForeColor="White"
                     HorizontalAlign="Center" />
             </asp:GridView>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
