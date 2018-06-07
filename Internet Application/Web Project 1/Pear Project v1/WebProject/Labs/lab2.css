@@ -1,0 +1,26 @@
+p{
+	font-family:courier;
+	font-size:1.0em;
+}
+
+#para1{
+	font-family:verdana;
+	font-style:italic;
+}
+
+.info{
+	font-size:2em;
+	text-align:left;
+	line-height:1.5em;
+}
+
+.blue{
+	color:#0000ff;
+}
+
+body{
+	background-image:url(images/nature.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: 1800px 1600px;
+}

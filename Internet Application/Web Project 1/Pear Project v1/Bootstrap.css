@@ -1,0 +1,12 @@
+.container-fluid{
+	text-align: center;
+}
+#header{
+	background-color: #2f3135;
+	color:white;
+	height:50px;
+}
+
+#row2{
+	background-color:#afb1b5;
+}
