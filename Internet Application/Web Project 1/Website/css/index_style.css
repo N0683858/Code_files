@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
-  color:white;
+  color:black;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -15,7 +15,7 @@ main{
   width: 100vw;
 
   /*Sets background image */
-  background: url("img/background3.jpg") fixed no-repeat;
+  background: url("img/background4.jpg") fixed no-repeat;
   /* SOURCE: https://www.videoblocks.com/video/abstract-simple-black-and-white-low-poly-waving-3d-surface-as-cyber-background-grey-geometric-
   vibrating-environment-or-pulsating-background-in-cartoon-low-poly-popular-stylish-3d-design-rreok4xybbj39myjlt */
 
@@ -136,8 +136,7 @@ nav a{
   text-decoration: none !important;
 
   /* Sets the font colour to black */
-  /*color: rgba(0,0,0, 1);*/
-  color: white;
+  color: rgba(0,0,0, 1);
   font-weight: bold;
 }
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRODUCTS>
+	<PRODUCT>
+		<NAME>Dell XPS</NAME>
+		<TYPE>Laptop</TYPE>
+		<PRICE>1300.00</PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Beats X Wireless Earphones</NAME>
+		<TYPE>Headphones</TYPE>
+		<PRICE>129.99</PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Iphone X</NAME>
+		<TYPE>Phone</TYPE>
+		<PRICE>999.99</PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>MacBook Air</NAME>
+		<TYPE>Laptop</TYPE>
+		<PRICE>1099.99</PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Samsung S9</NAME>
+		<TYPE>Phone</TYPE>
+		<PRICE>799.99</PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME></NAME>
+		<TYPE></TYPE>
+		<PRICE></PRICE>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME></NAME>
+		<TYPE></TYPE>
+		<PRICE></PRICE>
+	</PRODUCT>
+</PRODUCTS>
