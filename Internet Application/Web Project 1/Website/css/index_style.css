@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
+  color:white;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -14,7 +15,7 @@ main{
   width: 100vw;
 
   /*Sets background image */
-  background: url("img/background.png") fixed no-repeat;
+  background: url("img/background3.jpg") fixed no-repeat;
   /* SOURCE: https://www.videoblocks.com/video/abstract-simple-black-and-white-low-poly-waving-3d-surface-as-cyber-background-grey-geometric-
   vibrating-environment-or-pulsating-background-in-cartoon-low-poly-popular-stylish-3d-design-rreok4xybbj39myjlt */
 
@@ -86,7 +87,7 @@ nav{
 
   /* Sets position relative to the position of the "blur" element box */
   position: absolute;
-  
+
   /* Sets size of the width of the element box */
   width: 80%;
 
@@ -107,6 +108,7 @@ nav ul{
   /* Aligns the text and sets font colour to white */
   text-align: center;
   color: #000000;
+
 }
 
 /* Styles each individual list element */
@@ -124,6 +126,7 @@ nav li{
   /* Makes the list horizontal */
   float: left;
 
+
 }
 
 /* Styles all hyperlink tags */
@@ -133,7 +136,9 @@ nav a{
   text-decoration: none !important;
 
   /* Sets the font colour to black */
-  color: rgba(0,0,0, 1);
+  /*color: rgba(0,0,0, 1);*/
+  color: white;
+  font-weight: bold;
 }
 
 /* Styles all hyperlink tags when hovered over */
@@ -192,7 +197,7 @@ nav a:hover{
 /*SOURCE:https://codeburst.io/tutorial-make-a-bouncing-ball-entirely-with-css-1e7e3c853a50*/
 
 
-.ball { 
+.ball {
 
   /* Sets width and height of div */
   width: 100px;
@@ -226,11 +231,11 @@ nav a:hover{
 }
 
 @keyframes bounce {
-    
+
   /* Used to set how far the ball will travel */
   from { transform: translate3d(0, 6vh, 0); }
-  to   { transform: translate3d(0, 16vh, 0); } 
-    
+  to   { transform: translate3d(0, 16vh, 0); }
+
 }
 
 }
@@ -313,7 +318,7 @@ nav a:hover{
   nav a{
 
     font-size: 80%;
-    
+
   }
 
 
@@ -338,7 +343,7 @@ nav a:hover{
   nav a{
 
     font-size: 20%;
-    
+
   }
 
   /* Styles element box of the entire list */
