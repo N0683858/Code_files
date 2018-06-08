@@ -26,13 +26,13 @@
 		<PRICE>799.99</PRICE>
 	</PRODUCT>
 	<PRODUCT>
-		<NAME></NAME>
-		<TYPE></TYPE>
-		<PRICE></PRICE>
+		<NAME>Beats Solo 3 Wireless</NAME>
+		<TYPE>Headphones</TYPE>
+		<PRICE>249.99</PRICE>
 	</PRODUCT>
 	<PRODUCT>
-		<NAME></NAME>
-		<TYPE></TYPE>
-		<PRICE></PRICE>
+		<NAME>Apple Watch S3</NAME>
+		<TYPE>Watch</TYPE>
+		<PRICE>399.99</PRICE>
 	</PRODUCT>
 </PRODUCTS>
