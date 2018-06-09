@@ -33,6 +33,9 @@ function myFunction2(){
 
   for(var i = 1; i < table.rows.length; i++)
   {
-    sumVal + parseInt(table.row[i])
+    sumVal + parseInt(table.row[i].cells[2].innerHTML);
   }
+
+  document.getElementById("sum").innerHTML = "sum value = " + sumVal;
+  console.log(sumVal);
 }
