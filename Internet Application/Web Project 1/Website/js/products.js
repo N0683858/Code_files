@@ -22,8 +22,17 @@ function myFunction(xml) {
     "</td><td>" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
     "</td><td>" + "<img src='" +
-    x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'>" +
+    x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'/>" +
     "</td></tr>";;
   }
   document.getElementById("demo").innerHTML = table;
+}
+
+function myFunction2(){
+  var table = document.getElementById("demo"), sumVal = 0;
+
+  for(var i = 1; i < table.rows.length; i++)
+  {
+    sumVal + parseInt(table.row[i])
+  }
 }
