@@ -1,5 +1,5 @@
 <?php
-    
+
     // Only process POST reqeusts
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -14,12 +14,12 @@
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo ("Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at edwardcelella@gmail.com.");
+            echo ("Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at N0683858@my.ntu.ac.uk.");
             exit;
         }
 
         // Set the recipient email address
-        $recipient = "edwardcelella@gmail.com";
+        $recipient = "N0683858@my.ntu.ac.uk";
 
         // Set the email subject
         $subject = "New website email from $name";
@@ -40,13 +40,13 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo ("Oops! Something went wrong and we couldn't send your message. Please try again, or email me using your mail client at edwardcelella@gmail.com.");
+            echo ("Oops! Something went wrong and we couldn't send your message. Please try again, or email me using your mail client at N0683858@my.ntu.ac.uk.");
         }
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
         http_response_code(403);
-        echo ("There was a problem with your submission. Please try again, or email me using your mail client at edwardcelella@gmail.com.");
+        echo ("There was a problem with your submission. Please try again, or email me using your mail client at N0683858@my.ntu.ac.uk.");
     }
 
 ?>

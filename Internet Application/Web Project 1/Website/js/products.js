@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html>
-<style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
-}
-th,td {
-  padding: 5px;
-}
-</style>
-<body>
-
-<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
-<br><br>
-<table id="demo"></table>
-
-<script>
 function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
@@ -23,25 +5,25 @@ function loadXMLDoc() {
       myFunction(this);
     }
   };
-<!--  xmlhttp.open("GET", "http://www.w3schools.com/xml/cd_catalog.xml", true);-->
-  xmlhttp.open("GET", "XML/products.xml", true);
+/* xmlhttp.open("GET", "http://www.w3schools.com/xml/cd_catalog.xml", true); */
+  xmlhttp.open("GET", "../html/XML/products.xml", true);
   xmlhttp.send();
 }
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var table="<tr><th>Artist</th><th>Title</th><th>Price</th></tr>";
   var x = xmlDoc.getElementsByTagName("PRODUCT");
-  for (i = 0; i <x.length; i++) { 
+  for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
     x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+    "</td><td>" +
+    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+    "</td><td>" + "<img src='" +
+    x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'>" +
+    "</td></tr>";;
   }
   document.getElementById("demo").innerHTML = table;
 }
-</script>
-
-</body>
-</html>
