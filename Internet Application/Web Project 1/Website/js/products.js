@@ -3,6 +3,7 @@ function loadXMLDoc() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       myFunction(this);
+      myFunction2();
     }
   };
 /* xmlhttp.open("GET", "http://www.w3schools.com/xml/cd_catalog.xml", true); */
@@ -15,14 +16,15 @@ function myFunction(xml) {
   var table="<tr><th>Artist</th><th>Title</th><th>Price</th><<th>Img</th></tr>";
   var x = xmlDoc.getElementsByTagName("PRODUCT");
   for (i = 0; i <x.length; i++) {
-    table += "<tr><td>" +
+    table += "<tr><td>" + "<img style='width:60%;' src='" +
+    x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'/>" +
+    "</td><td>" +
     x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
-    "</td><td>" + "<img style='width:60%;' src='" +
-    x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'/>" +
+    "</td><td>" + "<button type='button'></button>" +
     "</td></tr>";;
   }
   document.getElementById("demo").innerHTML = table;
