@@ -12,7 +12,7 @@ function loadXMLDoc() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th><th>Price</th></tr>";
+  var table="<tr><th>Artist</th><th>Title</th><th>Price</th><<th>Img</th></tr>";
   var x = xmlDoc.getElementsByTagName("PRODUCT");
   for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
@@ -21,7 +21,7 @@ function myFunction(xml) {
     x[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
-    "</td><td>" + "<img src='" +
+    "</td><td>" + "<img style='width:60%;' src='" +
     x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue + "'/>" +
     "</td></tr>";;
   }

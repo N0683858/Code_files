@@ -68,6 +68,7 @@ th,td {
         <br><br>
         <table id="demo"></table>
         <span id="val"></span>
+
       </div>
     </div>
   </section>
@@ -98,6 +99,32 @@ th,td {
   </div>
 
     <!-- Optional JavaScript -->
+<!-- <script>
+  if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.open("GET","XML/products.xml",false);
+  xmlhttp.send();
+  xmlDoc=xmlhttp.responseXML;
+
+  document.write("<table border='1'>");
+  var x=xmlDoc.getElementsByTagName("PRODUCT");
+  for (i=0;i<x.length;i++)
+  {
+    document.write(x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue);
+    var img = document.createElement("img");
+    img.src = x[i].getElementsByTagName("imageurl")[0].childNodes[0].nodeValue;
+    document.write(img.src);
+    document.body.appendChild(img);
+  }
+  document.write("</table>");
+</script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
