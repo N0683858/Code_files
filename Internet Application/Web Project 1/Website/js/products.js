@@ -23,7 +23,7 @@ function myFunction(xml) {
     x[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue +
     "</td><td>" + "£" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
-    "</td><td>" + "<button id='add_btn' onclick='myFunction("  + x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue + ");' type='button'>Add</button>" +
+    "</td><td>" + "<button id='add_btn' onclick='calTotal("  + x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue + ");' type='button'>Add</button>" +
     "</td></tr>";;
   }
   //var tot = "<input name='tot' id='tot' type='number' value='' disabled>"

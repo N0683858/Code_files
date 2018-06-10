@@ -2,7 +2,7 @@
 /* -------------------------------------------------------------------------------------- */
 /*               Previrw images with thumbnail                                            */
 /* -------------------------------------------------------------------------------------- */
-//followed YT tutorial: How to make Image Slider with with thumnail preview (JS) 
+//followed YT tutorial: How to make Image Slider with with thumnail preview (JS)
 
 /*var lastImg = 1; //Set initial thumbnail and preview
 document.getElementById(0).src = document.getElementById(lastImg).src;
@@ -50,4 +50,16 @@ function random()
   index = Math.floor((Math.random() * 3) + 0);
   var slideName="images/img" + titles[index] + ".jpg";
   img.src=slideName;
+}
+
+var ct = 0;
+var imgs = new Array("../html/images/img1.jpg, ../html/images/img2.jpg, ../html/images/img3.jpg");
+setTimeout("progress()",3000);
+
+function progress() {
+   if (ct < 3) {
+      document.images[0].src=imgs[ct];
+      ct++;
+      setTimeout("progress()",3000);
+   }
 }
