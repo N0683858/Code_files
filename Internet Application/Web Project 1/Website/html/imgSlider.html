@@ -12,17 +12,25 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
-  table,th,td {
-    border : 0px solid black;
-    border-collapse: collapse;
+  .preview {
+  width:60%;
+  height:360px}
+
+  .thumb {
+  width:205px;
+  margin-right:3px;}
+
+  .selected {
+  border:3px solid #ff0000;}
+
+  .btn{
+    display: inline-block;
   }
-  th,td {
-    padding: 5px;
-  }
-</style>
+  </style>
 </head>
-<body onload="start()">
+<body>
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#242628">
     <!-- Brand/logo -->
@@ -44,7 +52,7 @@
         <li class="nav-item">
           <a class="nav-link" href="products.html">Products</a>
         </li>
-          <a class="nav-link active">Order</a>
+          <a class="nav-link">Order</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -64,26 +72,22 @@
   <section class="content">
     <div class="container">
       <div class="jumbotron" id="Jumbot">
-        <h2>Order</h2>
-        <table id="demo"></table>
-        <!--
-        <input type="button" onclick="prev()" value="Prev" />
-        <input type="button" onclick="next()" value="Next" /> -->
-        <p><br /><br /></p>
-        <span id="demo2"></span>
+        <h2>Image Slider</h2>
 
-  <!-- ****************************************************************************************** -->
-  <!--                                Captcha                                                     -->
-  <!-- ****************************************************************************************** -->
-        <h1>Captcha</h1>
-        <div id="captcha">
-            <div id="serial" style="width:178px"></div>
-            <div>
-                <input type="text" placeholder="Type your text" id="entre"/>
-                <button id="generate" onclick="generate()">&#x21BB;</button>
-            </div>
-            <button id="btn" onclick="verifyCaptcha()">Confirm</button>
-        </div>
+  <!-- ***************  image slider with thubnails preview  ************************
+
+        <img id="0" class="preview normal" src="" alt="preview" /><br />
+        <img id="1" class="thumb normal" src="images/img1.jpg" alt="image1" onmouseover="preview(this)"/>
+        <img id="2" class="thumb normal" src="images/img2.jpg" alt="image2" onmouseover="preview(this)"/>
+        <img id="3" class="thumb normal" src="images/img3.jpg" alt="image3" onmouseover="preview(this)"/>
+ -->
+        <p><img id="img1" src="images/img1.jpg" width="400" height="325"></p>
+        <img id="1" class="thumb normal" src="images/img1.jpg" alt="image1"/>
+        <img id="2" class="thumb normal" src="images/img2.jpg" alt="image2"/>
+        <img id="3" class="thumb normal" src="images/img3.jpg" alt="image3"/>
+        <p><button class="btn" onclick="moveToNextSlide()">Next</button></p>
+        <p><button class="btn" onclick="moveToPrevSlide()">Prev</button></p>
+        <p><button class="btn" onclick="random()">Random</button></P>
       </div>
     </div>
   </section>
@@ -114,9 +118,9 @@
   </div>
 
     <!-- Optional JavaScript -->
-
+    <script type="text/javascript" src="../js/slideShow.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../js/products.js"></script>
+
   <!--  <script src="../js/captcha.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
