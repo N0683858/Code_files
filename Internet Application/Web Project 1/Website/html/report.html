@@ -34,7 +34,7 @@
         <li class="nav-item">
           <a class="nav-link" href="products.html">Products</a>
         </li>
-          <a class="nav-link">Order</a>
+          <a class="nav-link" href="order.html">Order</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -54,43 +54,42 @@
   <section class="content">
     <div class="container">
       <div class="jumbotron" id="Jumbot">
-        <h1>REVISION</h1>
+        <h1>REPORT</h1>
         <br>
         <br>
-        <h3>THEORY</h3>
+        <h3>Planning</h3>
         <br>
-        <p> <img src="../css/img/Diagram1.png" alt="Mechanics Diagram 1" align="right" height="450vh" width="600vw"> When a ball rolls down a slope there are forces that act on that ball, these are combined to create the resultant force which is what makes the ball move. These forces include the gravitational force being the weight of the ball which is mass*gravity, this force pushes the ball vertically downwards. Another force is the normal acting perpendicular to the angle of the slope, this force can be explained by Newton’s Third Law in which every action (force, the ball on the slope) has an equal and opposite reaction (the normal force). To work out the downhill net force of the ball in the x-direction the formula is as shown:</p>
-        <p>F<sub>(net-x)</sub> = mgsin⁡(∅) = ma<sub>x</sub></p>
-        <p>In which m is the mass and a is the acceleration of the object. The formula for working out the acceleration is a<sub>x</sub> = gsin⁡(∅), this equation can be used to find out the time it took for the ball to go down the slope and the final velocity of the ball. With our simulation the input values are the angle of the slope and the mass of the ball so with these values the net force and acceleration can easily be calculated by inputting the values into the equations above. The length of the adjacent side to the angle will be known as it will never change.</p>
-        <p>To work out the time and velocity the SUVAT equations will need to be used. For velocity the following equation can be used v<sup>2</sup> = u<sup>2</sup> + 2as however you will need to square root the answer to get the right value of the final velocity.  Looking at this equation we have a, which is the acceleration and the initial velocity (u) equals 0 so to work out t(time) we first need to find s(displacement). This equation can be shortened down to v<sup>2</sup> = 2as because u<sup>2</sup> = 0. To work out the displacement you simply use trigonometry, the known side is adjacent and the wanted side is the opposite therefore using SOH CAH TOA we know that we will be using tan⁡(). Thus, the equation we will be using to work out the displacement will be s = tan⁡(∅)×adj. Now the final velocity can be worked out using all the equations above.</p>
-        <p>Finally, to work out the time that it takes the ball to roll down the slope we can use any of the following SUVAT equation:</p>
-        <p align="middle">a=(v-u)/t <br> v=u+at <br> s=1⁄2(u+v)t</p>
-        <p>These equations will need to be rearranged so that t is the subject and nothing else need to be worked out as we already have all the values needed in these equations. Just insert the values and that is how you work out the time.</p>
+        <p>Since this was my first ever website project, it was really difficult for me to plan how I would want my website to look, or what functionality it will have and how I will implement it.
+          So, I decided to look at websites currently out there such as Apple, Samsung and used them as a reference which gave me an idea how the website should look.</p>
+        <p>After looking at the websites I decided to draw a rough template and design of the website in my notebook so that I don't forget later on when I'm actually implementing it.
+        As I started drawing the design, more ideas kept coming to me on what other functionality I should include and which page I will have it on. I then streated doing research on the functionality I wanted to include by looking at different YouTube video tutorials and finished off any lab work I had left, which then meant I was ready
+        to implement my website.</p>
+
         <br>
-        <h3>PRACTICE QUESTION</h3>
+        <h3>Implementation</h3>
+          <p>Making a start was really hard since I couldn't decide where to start from, and after a bit of thinking, I decided that it would make more sense if I started with the home page.
+          I used Bootstrap to create the navigation bar and few other things as it has built in responsiveness which saves me a lot of work writing down media rules. After creating the navigation bar,
+          I moved on to the image slider which I also created using Bootstrap as it had a lot of built in functionality which made this very easy so I didn't have to write extra code for the images
+          to change etc. Then I started to browse the internet for some images of phones and laptop etc. which I could use for the slider. It was very, very hard for me to find the right pictures
+          as I'm a perfectionist so I kept deleting and downloading more pictures until I found the ones the look perfect for me.</p>
+          <p>I was working on another project for PPM for which my role was to create a website (with another member assisting me) which will contain the information on the application we were creating and a download link for them to
+          download. We created a homepage where we used CSS3 trasformation to make an object bounce which I really liked so I decided to use the code for my Internet Application project too, but I couldn't decide where
+          to use it. After thinking really hard about it, I decided to make that as my main homepage and the current homepage can then be the 'products' page as it has all the details on the products. I had also created a contact form
+          for my other project where we used JavaScripta and PHP for validation and also had the functionality of being able to actually send an email with your message to my University email. Thus, I also
+          implemented the same functionality in this project too, which was working perfectly fine at the start, but now for some reason it can't find the php file and due to limited time, I decided not to
+          spend too much time fixing it. Then I started to work on the footer of the website. At first I was looking at different Bootstrap footer layout examples which I could maybe use, however, all of them
+          didn't look right to me as my website was simple but the footers were really flashy and had too much unnecessary information such as company address, contact information (number etc.). Therefore
+          I created my own simple footer which was very hard as I always felt it was missing something; I also used fontawesome to add the social media links on the footer which helped me statisfy the way I wanted
+          it to look, altough I still feel there's something still missing but decided it looked good for now and decided to move on.</p>
+          <p>After coding the footer, I created an XML file and used javascript to read the XML file on the 'Order' page in a table format as well as in a drop down list so the user can select different products.
+          I was also able to display images along side the information. Then I coded the captcha after which lots of tutorials on YouTube but mojority of them went into really complex functionality so after
+          watching all those videos, I combined my knowledge and created a simple version of the captcha validation.</p>
         <br>
-        <img src="../css/img/Diagram2.png" alt="Mechanics Diagram 1" align="right" height="400vh" width="600vw">
-        <p><b>Q: Find the net Force to 2 decimal places.</b></p>
-        <p>F<sub>(net-x)</sub> = mgsin⁡(∅) = ma<sub>x</sub></p>
-        <p>Mass = 50, Theta = 35, Gravity = 9.8</p>
-        <p>35 × 9.8 × sin⁡(35) = 343 × sin⁡(35) = 196.736</p>
-        <p>Rounded to 2 decimal places the answer is <b>196.74N</b></p>
+
         <br>
-        <p><b>Q: Find the final velocity.</b></p>
-        <p>v<sup>2</sup>=u<sup>2</sup>+2as</p>
-        <p>u=0</p>
-        <p>a<sub>x</sub> = gsin⁡(∅) -> a = 9.8sin⁡(35) = 5.62ms<sup>-2</sup></p>
-        <p>s = tan⁡(∅) × adj -> s = tan⁡(35) × 20 = 14m</p>
-        <p>v<sup>2</sup> = 2 × 5.62 × 14 = 157.36</p>
-        <p>√157.36 = 12.54 </p>
-        <p>v = <b>12.54ms<sup>-1</sup></b></p>
+
         <br>
-        <p><b>Q: Find t.</b></p>
-        <p>a = (v-u)/t</p>
-        <p>Rearrange to solve for t.</p>
-        <p>t = (v-u)/a</p>
-        <p>a = 5.62ms<sup>2</sup>, u = 0, v = 12.54</p>
-        <p>t = 12.54⁄5.62 = <b>2.23s</b> </p>
+
       </div>
     </div>
   </section>

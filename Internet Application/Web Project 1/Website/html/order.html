@@ -69,15 +69,25 @@
         <!--
         <input type="button" onclick="prev()" value="Prev" />
         <input type="button" onclick="next()" value="Next" /> -->
+
         <p><br /><br /></p>
-        <span id="demo2"></span>
+        <hr>
+
+
 
   <!-- ****************************************************************************************** -->
   <!--                                Captcha                                                     -->
   <!-- ****************************************************************************************** -->
-        <h1>Captcha</h1>
+        <h1>Confirm Order</h1>
         <div id="captcha">
-            <div id="serial" style="width:178px"></div>
+          <form name="infoForm" onchange="validateForm()">
+            <input type="text" name="nameF" class="form-control" placeholder="First Name" style="margin:0.5em; width:95%;" required>
+            <input type="text" name="nameL" class="form-control" placeholder="Last Name" style="margin:0.5em; width:95%;" required>
+          </form>
+
+          <form id="ddlForm">
+          </form>
+            <div id="serial" style="width:50%; margin-left:2em;"></div>
             <div>
                 <input type="text" placeholder="Type your text" id="entre"/>
                 <button id="generate" onclick="generate()">&#x21BB;</button>

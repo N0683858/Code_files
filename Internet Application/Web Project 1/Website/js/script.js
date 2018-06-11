@@ -15,7 +15,7 @@ jQuery(document).ready( function ($) {
 	$(form).submit(function(event) {
 
 		// Stop the browser from submitting the form
-	    event.preventDefault();	    
+	    event.preventDefault();
 
 	    // Steralizes the input
 	    var formData = $(form).serialize();
@@ -55,10 +55,9 @@ jQuery(document).ready( function ($) {
 		    if (data.responseText !== '') {
 		        $(status).text(data.responseText);
 		    } else {
-		        $(status).text('Oops! An error occured and your message could not be sent. Please try again, or email me using your mail client at edwardcelella@gmail.com.');
+		        $(status).text('Oops! An error occured and your message could not be sent. Please try again, or email me using your mail client at N0683858@my.ntu.ac.uk.');
 		    }
 		});
 
 	});
 });
-

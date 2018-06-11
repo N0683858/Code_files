@@ -3,6 +3,8 @@ function loadXMLDoc() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       myFunction(this);
+      dropDownList(this);
+
     }
   };
 
@@ -23,15 +25,14 @@ function myFunction(xml) {
     x[i].getElementsByTagName("TYPE")[0].childNodes[0].nodeValue +
     "</td><td>" + "£" +
     x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
-    "</td><td>" + "<button id='add_btn' onclick='calTotal("  + x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue + ");' type='button'>Add</button>" +
+    "</td><td>" + "<button id='add_btn' type='button'>Add</button>" +
     "</td></tr>";;
   }
   //var tot = "<input name='tot' id='tot' type='number' value='' disabled>"
   document.getElementById("demo").innerHTML = table;
 //  document.getElementById("demo2").innerHTML = tot;
+
 }
-
-
 
 /* -------------------------------------------------------------------------------------- */
 /*               Display 1 product at a time with next and prev buttons                   */
@@ -86,6 +87,37 @@ function prev()
 }
 */
 
+function validateForm(){
+	var x = document.forms["infoForm"]["nameF"].value;
+	if (x == null || x == ""){
+		alert("First name must be filled out");
+		return false;
+		}
+	}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*               Display 1 product name at a time in a drop down list                     */
+/* -------------------------------------------------------------------------------------- */
+function dropDownList(xml){
+
+  var i;
+  var xmlDoc = xml.responseXML;
+  var dropDown="<label for='Products' style='padding-top:0.5em;'>Choose Product:&ensp;</label><select name='products'>";
+  var x = xmlDoc.getElementsByTagName("PRODUCT");
+  for (i = 0; i <x.length; i++) {
+    dropDown += "<option value='" + x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue + "'>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</option>";;
+
+  }
+  dropDown += "</select>";
+
+  document.getElementById("ddlForm").innerHTML = dropDown;
+
+  }
+
+
 /* -------------------------------------------------------------------------------------- */
 /*                                     Captcha                                            */
 /* -------------------------------------------------------------------------------------- */
@@ -124,6 +156,7 @@ function verifyCaptcha() {
 
 }
 
+
 /* -------------------------------------------------------------------------------------- */
 /*                                     Call the functions                                 */
 /* -------------------------------------------------------------------------------------- */
@@ -132,4 +165,5 @@ function start()
   loadXMLDoc();
   //display();
   generate();
+  //dropDownList();
 }

@@ -18,6 +18,7 @@ function preview(img) {
 
 var index=0;
 var titles=[1,2,3];
+var caption=["itz the beats","itz the iphonez","itz a laptop"]
 
 function moveToNextSlide()
 {
@@ -28,14 +29,15 @@ index=-1;
 var img = document.getElementById("img1");
 index = index + 1;
 var slideName="images/img" + titles[index] + ".jpg";
+document.getElementById("caption").innerHTML = caption[index];
 img.src=slideName;
 }
 
 function moveToPrevSlide()
 {
-if (index >= titles.length)
+if (index <= 0)
 {
-index=+1;
+index= titles.length;
 }
 var img = document.getElementById("img1");
 index = index - 1;
@@ -52,7 +54,7 @@ function random()
   img.src=slideName;
 }
 
-var ct = 0;
+/*var ct = 0;
 var imgs = new Array("../html/images/img1.jpg, ../html/images/img2.jpg, ../html/images/img3.jpg");
 setTimeout("progress()",3000);
 
@@ -62,4 +64,4 @@ function progress() {
       ct++;
       setTimeout("progress()",3000);
    }
-}
+} */
