@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="html\XML\products.css"?>
+<PRODUCTS>
+	<PRODUCT>
+		<NAME>Dell XPS</NAME>
+		<TYPE>Laptop</TYPE>
+		<PRICE>1300.00</PRICE>
+		<imageurl>images/dell.jpg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Beats X Wireless Earphones</NAME>
+		<TYPE>Headphones</TYPE>
+		<PRICE>129.99</PRICE>
+		<imageurl>images/BEATSx.jpg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Iphone X</NAME>
+		<TYPE>Phone</TYPE>
+		<PRICE>999.99</PRICE>
+		<imageurl>images/iphoneX2.jpg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>MacBook Air</NAME>
+		<TYPE>Laptop</TYPE>
+		<PRICE>1099.99</PRICE>
+		<imageurl>images/matebookxpro.jpeg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Samsung Galaxy S9</NAME>
+		<TYPE>Phone</TYPE>
+		<PRICE>799.99</PRICE>
+		<imageurl>images/s9.jpg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Beats Solo 3 Wireless</NAME>
+		<TYPE>Headphones</TYPE>
+		<PRICE>249.99</PRICE>
+		<imageurl>images/Beats.jpg</imageurl>
+	</PRODUCT>
+	<PRODUCT>
+		<NAME>Apple Watch S3</NAME>
+		<TYPE>Watch</TYPE>
+		<PRICE>399.99</PRICE>
+		<imageurl>images/watch.png</imageurl>
+	</PRODUCT>
+</PRODUCTS>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" language="javascript">
+	
+
+	function displaySports(){
+	
+	var selection = document.forms['sports']['sports'];
+	var card = document.forms['sports']['card'];
+	var label = document.getElementById("card")
+	
+	if(selection.options[selection.selectedIndex].value == "Ice Hockey"){
+	
+	label.style.display = 'inline';
+	card.style.display = 'inline';
+	}
+	else{
+	label.style.display = 'none';
+	card.style.display = 'none'; }
+  }
+	</script>
+
+</head>
+
+<body>
+
+<form name="sports" action="#">
+	<p><label for="favouritesport">Favourite Sport: </label><select name="sports" onChange="displaySports();">
+				<option value="Football">Football</option>
+				<option value="Basketball">Basketball</option>
+				<option value="Ice Hockey">Ice Hockey</option>
+				</select>
+	</p>
+
+	<p><label for="card" id="card">Team Name: </label><input name="card" type="text" id="card"/></p>
+	
+	<p><input name="add" type="submit" value="Submit"></p>
+</body>
+</html>

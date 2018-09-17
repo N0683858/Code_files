@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" language="javascript">
+	var mouseoutImg = new Image;
+	var mouseoverImg = new Image;
+	
+	mouseoutImg.src="images/image1.jpg";
+	mouseoverImg.src="images/image2.jpg";
+	
+	function rollOver(){ document.myImg.src = mouseoverImg.src; }
+	function rollOut(){ document.myImg.src = mouseoutImg.src; }
+	</script>
+	
+</head>
+
+<body>
+	<div align="center">
+		<a href="#" onmouseover="rollOver();" onmouseout="rollOut();">
+		<img src="images/image1.jpg" name="myImg" border="0" alt="Swap Image!">
+		</a>
+	</div>
+
+</body>
+</html>
